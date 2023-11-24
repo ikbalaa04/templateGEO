@@ -1,0 +1,266 @@
+.swiper {
+    &-wrapper {
+        &.has-pagination {
+            padding-bottom: 60px;
+            &-and-navigation {
+                padding-bottom: 100px;
+                + .swiper-pagination-fraction,
+                + .swiper-pagination-custom,
+                + .swiper-horizontal > .swiper-pagination-bullets,
+                + .swiper-pagination-bullets.swiper-pagination-horizontal {
+                    bottom: 100px;
+                }
+            }
+        }
+        &.has-navigation {
+            padding-bottom: 40px;
+        }
+    }
+
+    &-button {
+        &-group {
+            &-s1 {
+                display: flex;
+                align-items: center;
+                .swiper-button-prev,
+                .swiper-button-next {
+                    position: inherit;
+                    top: auto;
+                    margin: 8px;
+                }
+                .swiper-button-prev {
+                    left: auto;
+                }
+                .swiper-button-next {
+                    right: auto;
+                }
+            }
+            &-s2 {
+                .swiper-button-disabled {
+                    display: none;
+                }
+                .swiper-button-next,
+                .swiper-rtl .swiper-button-prev {
+                    right: -8px;
+                }
+            }
+            &.has-bg {
+                .swiper-button-prev,
+                .swiper-button-next {
+                    background-color: $swiper-navigation-has-bg;
+                    box-shadow: none;
+                    color: $swiper-navigation-has-color;
+                    &:hover {
+                        background-color: $swiper-navigation-hover-bg;
+                        color: $swiper-navigation-hover-color;
+                    }
+                }
+            }
+        }
+    }
+
+    &-pagination {
+        &-s1 {
+            bottom: 0 !important;
+            .swiper-pagination-bullet {
+                width: $swiper-pagination-s1-bullet-width;
+                height: $swiper-pagination-s1-bullet-height;
+                background-color: $swiper-pagination-s1-bullet-inactive-color;
+                border-radius: $swiper-pagination-s1-bullet-border-radius;
+                opacity: 1;
+                &:hover,
+                &-active {
+                    background-color: $swiper-pagination-s1-bullet-active-color;
+                }
+            }
+        }
+
+        &-4 {
+            .swiper-pagination-bullet {
+                background-color: #fff;
+                &-active {
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+}
+
+.is-theme {
+    .swiper {
+        &-pagination-bullet {
+            background-color: $swiper-pagination-bullet-inactive-color-on-theme;
+            opacity: 1;
+            &-active {
+                background-color: $swiper-pagination-bullet-active-color-on-theme;
+            }
+        }
+
+        &-button-group {
+            &.has-bg {
+                .swiper-button-prev,
+                .swiper-button-next {
+                    background-color: $swiper-navigation-has-bg-on-theme;
+                    color: $swiper-navigation-has-color-on-theme;
+                    &:hover {
+                        background-color: $swiper-navigation-has-bg-on-theme-hover-bg;
+                        color: $swiper-navigation-has-bg-on-theme-hover-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nk-swiper {
+    &-s2 {
+        .swiper {
+            // components
+
+            &-button-prev {
+                left: 0;
+            }
+
+            &-button-next {
+                right: 0;
+            }
+
+            &-slide {
+                &:not(.swiper-slide-active) {
+                    opacity: $swiper-s2-slide-inactive;
+                    pointer-events: none;
+                }
+            }
+
+            &-pagination {
+                &-bullet {
+                    opacity: 1;
+                    background-color: $nk-gray-100;
+                    &-active {
+                        background-color: $accent-color;
+                    }
+                }
+            }
+        }
+
+        &.overflow-visible {
+            .swiper-button {
+                &-prev {
+                    transform: translateX(-50%);
+                }
+                &-next {
+                    transform: translateX(50%);
+                }
+            }
+        }
+    }
+
+    &-s3 {
+        // swiper component
+        .swiper {
+            &-button-prev,
+            &-button-next {
+                &.swiper-button-disabled {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    &-s4 {
+        .swiper {
+            // components
+            &-button {
+                &-prev,
+                &-next {
+                    transform: translateY(-50%);
+                }
+
+                &-prev {
+                    left: 12px;
+                }
+
+                &-next {
+                    right: 12px;
+                }
+            }
+
+            &-slide {
+                transition: all 0.2s linear;
+            }
+
+            &-pagination {
+                &-bullet {
+                    opacity: 1;
+                    background-color: $nk-gray-50;
+                    &-active {
+                        background-color: $accent-color;
+                    }
+                }
+            }
+        }
+
+        &.overflow-visible {
+            .swiper-button {
+                &-prev {
+                    transform: translateX(-50%);
+                }
+                &-next {
+                    transform: translateX(50%);
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .nk-swiper {
+        &-s1 {
+            .swiper-slide {
+                transition: 0.5s;
+                transform: scale(0.6);
+                &-active {
+                    transform: scale(1);
+                    transform-origin: center;
+                }
+                &-prev {
+                    transform-origin: right;
+                }
+                &-next {
+                    transform-origin: left;
+                }
+            }
+        }
+
+        &-s4 {
+            .swiper {
+                &-slide {
+                    transition: all 0.2s linear;
+                    &-active {
+                        padding-left: 100px;
+                    }
+                    &-next {
+                        padding-right: 100px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(xxl) {
+    .swiper-button {
+        &-group {
+            &-s2 {
+                .swiper-button-next,
+                .swiper-rtl .swiper-button-prev {
+                    right: -60px;
+                }
+                .swiper-button-prev,
+                .swiper-rtl .swiper-button-next {
+                    left: -60px;
+                }
+            }
+        }
+    }
+}

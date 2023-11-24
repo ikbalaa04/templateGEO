@@ -1,0 +1,23 @@
+.on {
+    display: block;
+}
+.off {
+    display: none;
+}
+.form-note {
+    font-size: 0.813rem;
+    font-weight: 400;
+}
+
+.sep {
+    position: relative;
+    height: $sep-height;
+    background-color: $sep-bg;
+    &-overlap {
+        background-color: $sep-overlap-bg;
+        display: inline-block;
+        position: absolute;
+        top: -11px;
+        padding: 0 10px 0 0;
+    }
+}

@@ -1,0 +1,20 @@
+.social-links{
+    gap: 40px;
+    display: flex;
+    align-items: center;
+    .icon{
+        font-size: $social-link-icon-font-size;
+    }
+    a {
+        color: $social-link-color;
+        &:hover {
+            color: $social-link-hover-color;
+        }
+    }
+    
+    &.active-color{
+        a{
+            color: $social-link-active-color;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+@use "sass:math";
+
+.media{
+    flex-shrink: 0;
+    width: $size-rg;
+    height: $size-rg;
+    overflow: hidden;
+    color: $base-color;
+    font-size: math.div($size-rg,3);
+    border-radius: $media-border-radius;
+    .icon{
+        font-size: math.div($size-rg, 2);
+    }
+    img{
+        border-radius: inherit;
+    }
+    &-circle{
+        border-radius: $media-circle-radius !important;
+    }
+    &-middle{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-border{
+        border: 1px solid $media-border-color;
+    }
+    &-group{
+        display: flex;
+        flex-grow: 1;
+        .media + .media-text{
+            margin-left: $media-text-gap-x;
+            &.md{
+                margin-left: $media-text-gap-x-md;
+            }
+        }
+        .media-text + .media-text{
+            margin-left: $media-text-text-gap-x;
+        }
+        .lead-text + .sub-text{
+            margin-top: 0.25rem;
+        }
+        &-overlap{
+            .media + .media{
+                margin-left: -$media-negative-start-gap;
+            }
+        }
+        &-column{
+            flex-direction: column;
+            .media + .media-text{
+                margin-left: 0;
+                margin-top: $media-text-gap-x;
+            }
+        }
+    }
+    &-xl{
+        border-radius: $media-border-radius-xl;
+    }
+}
+
+@each $size, $value in $sizes {
+    .media-#{$size}{
+        z-index: 1;
+        width: $value;
+        height: $value;
+        font-size: math.div($value, 3);
+        .icon{
+            font-size: math.div($value, 2);
+        }
+    }
+}

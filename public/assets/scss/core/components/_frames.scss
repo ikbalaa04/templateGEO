@@ -1,0 +1,998 @@
+$frame-class: "nk-frame";
+
+.#{$frame-class} {
+  position: relative;
+
+  &-children {
+    position: absolute;
+    transition: all 0.3s linear;
+  }
+
+  // Variants
+  &-one {
+    .#{$frame-class} {
+      &-children {
+        &-one {
+          top: 0;
+          left: 0;
+          width: 100%;
+
+          @include media-breakpoint-up(sm) {
+            width: auto;
+            top: 145px;
+            left: -15px;
+          }
+
+          @include media-breakpoint-up(lg) {
+            left: -100px;
+          }
+        }
+        &-two {
+          right: 0;
+          width: 100%;
+          bottom: 0px;
+          @include media-breakpoint-up(sm) {
+            width: auto;
+            right: 20px;
+            bottom: 185px;
+          }
+
+          @include media-breakpoint-up(lg) {
+            right: -20px;
+          }
+        }
+      }
+    }
+  }
+
+  &-three {
+    .#{$frame-class} {
+      &-children {
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+        &-one {
+          top: -30px;
+          z-index: -1;
+
+          @include media-breakpoint-up(xl) {
+            z-index: 1;
+            top: -70px;
+          }
+
+          @include media-breakpoint-up(lg) {
+            top: -60px;
+          }
+
+          @include media-breakpoint-up(md) {
+            left: -60px;
+          }
+          @include media-breakpoint-up(sm) {
+            left: -30px;
+          }
+        }
+        &-two {
+          @include media-breakpoint-up(sm) {
+            right: 0px;
+            bottom: 24px;
+          }
+
+          @include media-breakpoint-up(md) {
+            right: -40px;
+          }
+          @include media-breakpoint-up(lg) {
+            bottom: -35px;
+          }
+        }
+      }
+    }
+  }
+
+  &-four {
+    .#{$frame-class} {
+      &-children {
+        display: none;
+        transition: all 0.3s linear;
+        @include media-breakpoint-up(lg) {
+          display: block;
+        }
+        &-one {
+          top: 140px;
+          left: 60px;
+          @media (min-width: 1680px) {
+            top: 218px;
+            left: 455px;
+          }
+        }
+        &-two {
+          top: 160px;
+          right: 60px;
+          @media (min-width: 1680px) {
+            top: 207px;
+            right: 446px;
+          }
+        }
+
+        &-three {
+          top: 600px;
+          left: 185px;
+          @include media-breakpoint-up(xl) {
+            top: 485px;
+            left: 275px;
+          }
+          @media (min-width: 1620px) {
+            top: 565px;
+            left: 438px;
+          }
+        }
+
+        &-four {
+          right: 140px;
+          top: 620px;
+          @include media-breakpoint-up(xl) {
+            right: 320px;
+          }
+
+          @media (min-width: 1620px) {
+            right: 415px;
+            top: 595px;
+          }
+        }
+      }
+    }
+  }
+
+  &-five {
+    .#{$frame-class} {
+      &-children {
+        &-one {
+          top: -32px;
+          left: -32px;
+          z-index: -1;
+        }
+        &-two {
+          top: -24px;
+          right: 0;
+          @include media-breakpoint-up(md) {
+            right: -24px;
+          }
+        }
+        &-three {
+          right: 0;
+          bottom: -30px;
+          z-index: -1;
+
+          @include media-breakpoint-up(md) {
+            right: -18px;
+          }
+        }
+      }
+    }
+  }
+
+  // Project Management Banner
+  &-six {
+    .#{$frame-class} {
+      &-children {
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+
+        &-one {
+          top: 100px;
+          @include media-breakpoint-up(md) {
+            right: 30px;
+          }
+          @include media-breakpoint-up(lg) {
+            right: 268px;
+          }
+          @include media-breakpoint-up(xl) {
+            right: 40px;
+          }
+          @media (min-width: 1400px) {
+            right: 92px;
+          }
+        }
+
+        &-two {
+          left: -22px;
+          bottom: 82px;
+
+          @include media-breakpoint-up(md) {
+            left: -13px;
+            bottom: 158px;
+          }
+
+          @include media-breakpoint-up(lg) {
+            bottom: 181px;
+            left: 0px;
+          }
+
+          @include media-breakpoint-up(xl) {
+            bottom: 82px;
+            left: -22px;
+          }
+
+          @media (min-width: 1400px) {
+            left: 0;
+            bottom: 122px;
+          }
+        }
+
+        &-three {
+          bottom: 80px;
+          right: 60px;
+
+          @include media-breakpoint-up(md) {
+            right: 80px;
+            bottom: 158px;
+          }
+
+          @include media-breakpoint-up(lg) {
+            right: 278px;
+            bottom: 181px;
+          }
+
+          @include media-breakpoint-up(xl) {
+            right: 64px;
+            bottom: 79px;
+          }
+
+          @media (min-width: 1400px) {
+            right: 0px;
+            top: 234px;
+          }
+        }
+      }
+    }
+  }
+
+  // Project Management Features
+  &-seven-a {
+    .#{$frame-class} {
+      &-children {
+        &-one {
+          @include media-breakpoint-down(sm) {
+            display: none;
+          }
+        }
+
+        &-one {
+          @include media-breakpoint-up(sm) {
+            top: 76px;
+            right: calc(50% - 24px);
+          }
+
+          @include media-breakpoint-up(xl) {
+            top: 195px;
+            right: 0px;
+          }
+          @media (min-width: 1400px) {
+            right: 60px;
+          }
+        }
+
+        &-two {
+          @include media-breakpoint-down(md) {
+            display: none;
+          }
+
+          @include media-breakpoint-up(md) {
+            left: -40px;
+            bottom: -20px;
+          }
+
+          @include media-breakpoint-up(lg) {
+            left: 90px;
+          }
+
+          @include media-breakpoint-up(xl) {
+            left: -90px;
+          }
+
+          @media (min-width: 1400px) {
+            left: -46px;
+            bottom: -32px;
+          }
+        }
+
+        &-three {
+          @include media-breakpoint-down(sm) {
+            display: none;
+          }
+
+          @include media-breakpoint-up(sm) {
+            bottom: 0px;
+            right: -35px;
+          }
+
+          @include media-breakpoint-up(lg) {
+            right: 30px;
+          }
+
+          @include media-breakpoint-up(xl) {
+            right: -22px;
+            bottom: -130px;
+          }
+          @media (min-width: 1400px) {
+            right: -42px;
+            bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  &-seven-b {
+    .#{$frame-class} {
+      &-children {
+        &-one {
+          z-index: -1;
+          left: 50%;
+          width: 90%;
+          top: calc(50% - 24px);
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
+  &-seven-c {
+    margin-bottom: -45px;
+
+    @include media-breakpoint-up(sm) {
+      margin-bottom: -90px;
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0px;
+    }
+
+    .#{$frame-class} {
+      &-children {
+        &-one {
+          width: 75%;
+          left: 50%;
+          z-index: -1;
+          top: calc(50% - 24px);
+          transform: translate(-50%, -50%);
+        }
+
+        &-two {
+          top: -6px;
+          z-index: -2;
+
+          @include media-breakpoint-up(sm) {
+            right: calc(50% - 175px);
+            transform: translateX(50%);
+          }
+
+          @include media-breakpoint-up(xl) {
+            right: 0;
+            transform: translateX(0);
+          }
+
+          @media (min-width: 1400px) {
+            right: 60px;
+          }
+        }
+      }
+    }
+  }
+
+  &-eight {
+    @media (min-width: 1400px) {
+      right: -140px;
+      position: absolute;
+      top: calc(50% + 60px);
+      transform: translateY(-50%);
+    }
+
+    .#{$frame-class} {
+      &-children {
+        &-one {
+          display: none;
+          @media (min-width: 1400px) {
+            top: 0;
+            right: 80px;
+            z-index: -1;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  &-nine {
+    text-align: center;
+    @include media-breakpoint-up(xl) {
+      top: 50%;
+      position: absolute;
+      transform: translateY(-50%);
+    }
+
+    @media (min-width: 1500px) {
+      right: 90px;
+    }
+
+    @media (min-width: 1680px) {
+      right: 0;
+    }
+
+    &::after {
+      content: "";
+      left: 50%;
+      bottom: 30px;
+      width: 50%;
+      opacity: 0.6;
+      height: 288px;
+      position: absolute;
+      background: linear-gradient(
+        90deg,
+        #44bcff -0.55%,
+        #44b0ff 22.86%,
+        #ff44ec 48.36%,
+        #ff44ec 73.33%,
+        #ff675e 99.34%
+      );
+      filter: blur(58.1664px);
+      transform: rotate(0deg) translateX(-50%);
+
+      @include media-breakpoint-up(md) {
+        width: 100%;
+        bottom: 0px;
+      }
+    }
+
+    .#{$frame-class} {
+      &-children {
+        &-one,
+        &-two {
+          bottom: 18px;
+          z-index: -1;
+          @include media-breakpoint-down(md) {
+            display: none;
+          }
+        }
+        &-one {
+          right: 0;
+
+          @include media-breakpoint-up(xl) {
+            right: -90px;
+          }
+          @media (max-width: 1400) {
+            right: -120px;
+          }
+        }
+
+        &-two {
+          left: 0;
+          @include media-breakpoint-up(xl) {
+            left: -120px;
+          }
+        }
+
+        &-three {
+          top: -30px;
+
+          @include media-breakpoint-up(md) {
+            left: 75px;
+          }
+
+          @include media-breakpoint-up(lg) {
+            left: 150px;
+          }
+
+          @include media-breakpoint-up(xl) {
+            top: -16px;
+            left: -60px;
+          }
+        }
+        &-four {
+          z-index: -2;
+          bottom: -120px;
+          left: calc(50% - 30px);
+          transform: translateX(-50%);
+
+          @media (min-width: 1400px) {
+            width: 180%;
+          }
+
+          @include media-breakpoint-up(md) {
+            width: 100%;
+          }
+
+          @include media-breakpoint-down(md) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &-ten {
+    .#{$frame-class} {
+      &-children {
+        &-one {
+          top: 0;
+          left: 12px;
+          @media (min-width: 1400px) {
+            top: 70px;
+            left: 90px;
+          }
+        }
+
+        &-two {
+          display: none;
+          @include media-breakpoint-up(md) {
+            top: 60px;
+            left: 180px;
+            display: block;
+          }
+
+          @include media-breakpoint-up(xl) {
+            top: 68px;
+            left: 140px;
+          }
+
+          @media (min-width: 1400px) {
+            top: 172.31px;
+            left: 215.15px;
+          }
+        }
+
+        &-three {
+          top: 0;
+          right: 0px;
+          @include media-breakpoint-up(sm) {
+            right: auto;
+            top: 180px;
+            left: 400px;
+          }
+          @include media-breakpoint-up(md) {
+            left: 320px;
+          }
+
+          @include media-breakpoint-up(lg) {
+            top: 0;
+            right: 0;
+          }
+
+          @include media-breakpoint-up(xl) {
+            top: auto;
+            bottom: 0px;
+            right: 60px;
+          }
+
+          @media (min-width: 1400px) {
+            right: auto;
+            bottom: 78.46px;
+            left: 313.02px;
+          }
+        }
+        &-four {
+          left: 120px;
+          bottom: 60px;
+          @include media-breakpoint-up(sm) {
+            left: 80px;
+          }
+
+          @include media-breakpoint-up(md) {
+            bottom: 80px;
+            left: 230px;
+          }
+          @include media-breakpoint-up(lg) {
+            bottom: 30px;
+            left: 110px;
+          }
+
+          @include media-breakpoint-up(xl) {
+            bottom: auto;
+            top: 160px;
+            left: 265px;
+          }
+
+          @media (min-width: 1400px) {
+            left: auto;
+            top: auto;
+            right: 120.16px;
+            bottom: 12.31px;
+          }
+        }
+        &-five {
+          display: none;
+          @include media-breakpoint-up(md) {
+            left: 0;
+            bottom: 50px;
+            display: block;
+          }
+
+          @include media-breakpoint-up(lg) {
+            display: none;
+          }
+          @include media-breakpoint-up(xl) {
+            bottom: 0;
+            left: 41.2px;
+            display: block;
+          }
+
+          @media (min-width: 1400px) {
+          }
+        }
+        &-six {
+          display: none;
+
+          @include media-breakpoint-up(md) {
+            right: 0;
+            top: 120px;
+            display: block;
+          }
+
+          @include media-breakpoint-up(lg) {
+            display: none;
+          }
+
+          @include media-breakpoint-up(xl) {
+            top: 0;
+            right: 0;
+            display: block;
+          }
+
+          @media (min-width: 1400px) {
+            right: 41.26px;
+          }
+        }
+      }
+    }
+  }
+
+  &-eleven {
+    .#{$frame-class} {
+      &-children {
+        &-one {
+          left: 80px;
+          bottom: -30px;
+          display: none;
+          @include media-breakpoint-up(lg) {
+            display: block;
+          }
+
+          @media (min-width: 1400px) {
+            left: 160px;
+          }
+
+          @media (min-width: 1680px) {
+            left: 370px;
+          }
+        }
+        &-two {
+          bottom: 140px;
+          display: none;
+
+          @include media-breakpoint-up(lg) {
+            right: 24px;
+
+            display: block;
+          }
+
+          @media (min-width: 1200px) {
+            right: 155px;
+          }
+
+          @media (min-width: 1680px) {
+            right: 350px;
+          }
+        }
+      }
+    }
+  }
+
+  &-twelve {
+    .#{$frame-class} {
+      &-children {
+        &-one {
+          top: 0px;
+          right: 0px;
+
+          @include media-breakpoint-up(lg) {
+            top: -30px;
+            right: -30px;
+          }
+
+          @include media-breakpoint-up(xl) {
+            top: -40px;
+            right: -45px;
+          }
+
+          @media (min-width: 1400px) {
+            top: -46px;
+            right: -38px;
+          }
+        }
+      }
+    }
+  }
+  &-twelve-a {
+    .#{$frame-class} {
+      &-children {
+        &-one {
+          display: none;
+          @include media-breakpoint-up(md) {
+            top: -30px;
+            right: -30px;
+            display: block;
+          }
+
+          @include media-breakpoint-up(lg) {
+            top: auto;
+            right: auto;
+            bottom: -30px;
+            left: -30px;
+          }
+
+          @include media-breakpoint-up(xl) {
+            bottom: -40px;
+            left: -45px;
+          }
+
+          @media (min-width: 1400px) {
+            bottom: -46px;
+            left: -38px;
+          }
+        }
+      }
+    }
+  }
+
+  &-13 {
+    width: 90%;
+    margin-left: auto;
+    transition: all 0.3s linear;
+
+    @include media-breakpoint-up(md) {
+      width: 60%;
+    }
+
+    @include media-breakpoint-up(xl) {
+      right: 0;
+      width: 500px;
+      height: 440px;
+      bottom: -32px;
+      position: absolute;
+    }
+
+    @media (min-width: 1400px) {
+      width: 600px;
+      height: 525px;
+    }
+
+    @media (min-width: 1600px) {
+      width: 660px;
+    }
+
+    @media (min-width: 1800px) {
+      height: 662px;
+      width: 770px;
+    }
+  }
+
+  &-14 {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    position: absolute;
+    .#{$frame-class} {
+      &-children {
+        &-one,
+        &-two {
+          top: 50%;
+          width: 25%;
+          transform: translateY(-50%);
+
+          @media (min-width: 1800px) {
+            width: auto;
+          }
+        }
+        &-one {
+          left: 0;
+        }
+
+        &-two {
+          right: 0;
+        }
+      }
+    }
+  }
+
+  &-14 {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    position: absolute;
+    .#{$frame-class} {
+      &-children {
+        &-one,
+        &-two {
+          top: 50%;
+          width: 25%;
+          transform: translateY(-50%);
+
+          @media (min-width: 1800px) {
+            width: auto;
+          }
+        }
+        &-one {
+          left: 0;
+        }
+
+        &-two {
+          right: 0;
+        }
+      }
+    }
+  }
+
+  &-15 {
+    .#{$frame-class} {
+      &-children {
+        &-one {
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  &-16 {
+    z-index: 1;
+    position: relative;
+
+    &::before {
+      content: "";
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      left: 0px;
+      bottom: -100px;
+      position: absolute;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("#{$assetsRoot}blur/codebase-blur-1.png");
+
+      @include media-breakpoint-up(md) {
+        bottom: -200px;
+      }
+    }
+
+    .#{$frame-class} {
+      &-children {
+        &-one {
+          @include media-breakpoint-up(md) {
+            right: 0;
+            bottom: -30px;
+          }
+
+          @include media-breakpoint-up(lg) {
+            right: -60px;
+            bottom: -60px;
+          }
+
+          @media (min-width: 1400px) {
+            right: 0px;
+            bottom: -30px;
+          }
+        }
+      }
+    }
+  }
+
+  &-17 {
+    .#{$frame-class} {
+      &-children {
+        &-one {
+          @include media-breakpoint-up(lg) {
+            top: 130px;
+            left: -100px;
+          }
+        }
+
+        &-two {
+          @include media-breakpoint-up(lg) {
+            top: 100px;
+            right: -100px;
+          }
+        }
+      }
+    }
+  }
+
+  &-18 {
+    .#{$frame-class} {
+      &-children {
+        z-index: -1;
+        &-left {
+          left: 0;
+
+          &-bottom {
+            bottom: 0;
+          }
+        }
+
+        &-right {
+          right: 0;
+          &-top {
+            bottom: 240px;
+          }
+        }
+      }
+    }
+  }
+
+  // Careers
+  &-19 {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+
+    .#{$frame-class} {
+      &-children {
+        display: none;
+        user-select: none;
+        pointer-events: none;
+        transition: all 0.3s linear;
+        @include media-breakpoint-up(lg) {
+          display: block;
+        }
+
+        &-one {
+          @include media-breakpoint-up(lg) {
+            top: 60px;
+            left: 60px;
+          }
+        }
+
+        &-two {
+          display: none;
+
+          @include media-breakpoint-up(xl) {
+            left: 200px;
+            bottom: 98px;
+            display: block;
+          }
+        }
+
+        &-three {
+          @include media-breakpoint-up(lg) {
+            left: 60px;
+            bottom: 30px;
+          }
+        }
+
+        &-four {
+          right: 80px;
+          bottom: 60px;
+        }
+
+        &-five {
+          @include media-breakpoint-up(lg) {
+            top: 60px;
+            right: 60px;
+          }
+
+          @include media-breakpoint-up(xl) {
+            top: 100px;
+            right: 130px;
+          }
+        }
+      }
+    }
+  }
+}

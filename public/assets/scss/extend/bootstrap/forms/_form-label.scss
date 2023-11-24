@@ -1,0 +1,15 @@
+.form-label{
+    color: $input-label-color;
+    font-size: $input-label-font-size;
+    margin-bottom: $input-label-gap-y;
+    font-weight: $input-label-font-weight;
+    &-group{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: $input-label-gap-y;
+        .form-label{
+            margin-bottom: 0;
+        }
+    }
+}

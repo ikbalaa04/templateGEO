@@ -1,0 +1,12 @@
+.error-number{
+    font-size: $error-number-font-size-sm;
+    color: $error-number-color;
+    font-weight: $error-number-font-weight;
+    line-height: 1;
+    letter-spacing: -0.025em;
+}
+@include media-breakpoint-up(sm){
+    .error-number{
+        font-size: $error-number-font-size;
+    }
+}

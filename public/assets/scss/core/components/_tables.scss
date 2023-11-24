@@ -1,0 +1,21 @@
+.tb-col{
+    &-end, 
+    &-action{
+        text-align: right;
+    }
+    &-middle {
+        vertical-align: middle;
+    }
+}
+
+.nk-table { 
+    &-crypto { 
+        tbody { 
+            tr { 
+                &:nth-last-child(1) { 
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+}

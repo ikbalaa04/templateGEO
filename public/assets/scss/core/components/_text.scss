@@ -1,0 +1,45 @@
+@each $color, $value in $nk-theme-colors {
+    .text-#{$color} {
+        color: $value !important;
+    }
+}
+
+.text {
+    &-base {
+        color: $text-base !important;
+    }
+    &-light {
+        color: $text-light !important;
+    }
+    &-layout {
+        &-secondary {
+            color: $normal-layout-secondary !important;
+        }
+    }
+}
+
+.smaller {
+    font-size: $smaller-font-size;
+}
+
+.lead-text {
+    font-weight: $lead-text-font-weight;
+    color: $lead-text-color;
+    display: block;
+}
+.sub-text {
+    font-size: 0.75rem;
+    color: $sub-text-color;
+    display: block;
+    font-weight: $sub-text-font-weight;
+}
+
+.is-theme {
+    .sub-text,
+    .lead-text {
+        color: $white;
+    }
+    .sub-text {
+        font-weight: 400;
+    }
+}

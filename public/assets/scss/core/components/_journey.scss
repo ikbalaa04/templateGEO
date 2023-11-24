@@ -1,0 +1,147 @@
+.journey { 
+  &-contents { 
+    gap: 12px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+
+  &-item { 
+    padding-left: 12px;
+    position: relative;
+    align-items: center;
+
+
+    &:nth-child(1) { 
+
+      &::after { 
+        display: none;
+      }
+    }
+
+    &:nth-last-child(1) { 
+
+      &::before { 
+        display: none;
+      }
+    }
+
+      // border steps 
+      &::after,
+      &::before { 
+        content: '';
+        width: 2px;
+        left: 0px;
+        height: calc(50% + 12px);
+        position: absolute;
+        background-color: $primary;
+      }
+
+      &::after { 
+        top: -20px;
+      }
+      
+      &::before { 
+        bottom: -18px;
+      }
+
+    .circle { 
+      z-index: 1;
+      top: 50%;
+      left: -7px;
+      width: 16px;
+      height: 16px;
+      display: flex;
+      overflow: hidden;
+      position: absolute;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid $primary;
+      transform: translate(0, -50%);
+      &-dot { 
+        top: 50%;
+        left: 50%;
+        width: 4px;
+        height: 4px;
+        overflow: hidden;
+        position: absolute;
+        border-radius: 50%;
+        transform: translate(-50%,-50%);
+        background-color: $primary;
+      }
+
+
+    }
+
+
+  }
+}
+
+
+// responsive breakpoints
+
+@include media-breakpoint-up(md) { 
+  .journey { 
+    &-item { 
+      padding-left: 24px;
+    }
+  }
+}
+
+
+@include media-breakpoint-up(lg) {
+  .journey { 
+
+    &-card{
+      min-width: 400px;
+      max-width: calc(50% - 34px);
+    }
+
+    &-contents { 
+      gap: 36px;
+    }
+
+    &-item { 
+      display: flex;
+      padding-left: 0px;
+      &:nth-child(odd){
+        justify-content: flex-end;
+      }
+
+      // border line 
+      &::before { 
+        bottom: -18px;
+      }
+
+      &::after { 
+        top: -20px;
+      }
+      
+      &::after,
+      &::before { 
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+
+      // circles 
+      .circle { 
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) { 
+  .journey { 
+    &-card{
+      min-width: 540px;
+      max-width: calc(50% - 68px);
+    }
+  }
+}
+

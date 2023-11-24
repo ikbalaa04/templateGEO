@@ -1,0 +1,18 @@
+// nk body
+.nk{
+    &-body{
+        outline: none;
+    }
+    &-app{
+        &-root{
+            outline: none;
+        }
+    }
+
+}
+
+@media(max-width: 360px) { 
+    .nk-body { 
+        min-width: 350px;
+    }
+}

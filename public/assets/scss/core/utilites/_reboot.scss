@@ -1,0 +1,411 @@
+canvas {
+    width: 100%;
+    max-width: 100%;
+}
+body {
+    color: $base-text;
+    font-size: $nk-font-size-base;
+    font-weight: $body-font-weight;
+    font-family: $nk-font-family-sans-serif;
+}
+a {
+    transition: color 0.2s, background-color 0.2s, border 0.2s, box-shadow 0.2s;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: bold;
+    color: $base-color;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+p {
+    &:where(:last-child) {
+        margin-bottom: 0;
+    }
+    .is-theme & {
+        color: $white;
+    }
+}
+
+.point-none {
+    &:hover {
+        color: inherit;
+    }
+}
+
+.is-theme {
+    .nk-nav-btns {
+        .btn,
+        .btn:hover {
+            color: $white;
+        }
+        .btn-primary:hover,
+        .btn-danger:hover,
+        .btn-success:hover,
+        .btn-info:hover,
+        .btn-secondary:hover,
+        .btn-white:hover,
+        .btn-outline-primary:hover,
+        .btn-outline-danger:hover,
+        .btn-outline-success:hover,
+        .btn-outline-info:hover,
+        .btn-outline-secondary:hover,
+        .btn-outline-white:hover {
+            color: $base-color;
+        }
+    }
+}
+
+ol,
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+}
+
+hr {
+    border: 0;
+    color: $hr-color; // 1
+    margin: $hr-margin-y 0;
+    border-top: $hr-border-width solid $hr-border-color;
+    opacity: $hr-opacity;
+}
+
+.display-6 {
+    letter-spacing: -0.025em;
+    line-height: 1.32; // 84
+}
+h1,
+.h1 {
+    line-height: 1.33; // 48
+}
+h2,
+.h2 {
+    line-height: $nk-line-height-sm;
+}
+h3,
+.h3 {
+    line-height: 1.61; // 52
+    letter-spacing: -0.02em;
+}
+h4,
+.h4 {
+    line-height: 1.68; // 40
+    letter-spacing: -0.015em;
+}
+h5,
+.h5 {
+    line-height: 1.6; // 32
+    letter-spacing: -0.01em;
+}
+h6,
+.h6 {
+    line-height: 1.58; // 58
+}
+.smaller {
+    line-height: 1.7;
+}
+.small {
+    line-height: 1.6;
+}
+
+.rounded-16 {
+    border-radius: 1rem;
+}
+
+// Homepages
+
+.home {
+    &-collaboration-tool {
+        .nk-section-space {
+            @include media-breakpoint-down(sm) {
+                padding: 60px 0px;
+            }
+
+            &-lg {
+                @include media-breakpoint-down(sm) {
+                    padding: 60px 0px;
+                }
+            }
+        }
+    }
+
+    &-codebase,
+    &-bs-consulting {
+        .btn {
+            @include media-breakpoint-down(md) {
+                padding: 8px 16px;
+            }
+        }
+    }
+}
+
+.home-live-chat-app {
+    .display-6 {
+        letter-spacing: -0.025em;
+        line-height: 1.12; // 72
+    }
+    h1,
+    .h1 {
+        line-height: 1.33; // 64
+        letter-spacing: -0.02em;
+    }
+    h2,
+    .h2 {
+        line-height: 1.41; // 56
+        letter-spacing: -0.02em;
+    }
+    h3,
+    .h3 {
+        line-height: 1.4; // 45
+    }
+    h4,
+    .h4 {
+        line-height: 1.68; // 40
+    }
+    h5,
+    .h5 {
+        line-height: 1.6; // 32
+        letter-spacing: -0.01em;
+    }
+    h6,
+    .h6 {
+        line-height: 1.58; // 28
+        letter-spacing: -0.01em;
+    }
+}
+
+.home-kids-course {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+        font-family: $nk-font-family-sans-serif-secondary;
+        font-weight: bold;
+    }
+    .display-6 {
+        letter-spacing: -0.025em;
+        line-height: 1.25; // 80
+    }
+    h1,
+    .h1 {
+        line-height: 1.33; // 64
+        letter-spacing: -0.02em;
+    }
+    h2,
+    .h2 {
+        line-height: 1.41; // 56
+        letter-spacing: -0.02em;
+    }
+    h3,
+    .h3 {
+        line-height: 1.61; // 52
+        letter-spacing: -0.02em;
+    }
+    h4,
+    .h4 {
+        line-height: 1.68; // 40
+        letter-spacing: -0.015rem;
+    }
+    h5,
+    .h5 {
+        line-height: 1.6; // 32
+        letter-spacing: -0.01em;
+    }
+    h6,
+    .h6 {
+        line-height: 1.58; // 28
+        letter-spacing: -0.01em;
+    }
+}
+
+.home-business-expense-tracker {
+    .display-6 {
+        letter-spacing: -0.025em;
+        line-height: 1.32; // 84
+    }
+    h1,
+    .h1 {
+        line-height: 1.33; // 64
+        letter-spacing: -0.02em;
+    }
+    h2,
+    .h2 {
+        line-height: 1.41; // 56
+        letter-spacing: -0.02em;
+    }
+    h3,
+    .h3 {
+        line-height: 1.5; // 54
+        letter-spacing: -0.01em;
+    }
+    h4,
+    .h4 {
+        line-height: 1.5; // 36
+    }
+    h5,
+    .h5 {
+        line-height: 1.6; // 32
+        letter-spacing: -0.01em;
+    }
+    h6,
+    .h6 {
+        line-height: 1.58; // 28
+        letter-spacing: -0.01em;
+    }
+}
+
+.home-crypto-portfolio {
+    z-index: 1;
+    position: relative;
+    &::after {
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("#{$assetsRoot}mask/mask-body-1.png");
+    }
+
+    .nk-header {
+        &-main {
+            &.has-fixed {
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .display-6 {
+            font-size: 4rem;
+            line-height: 4.5rem;
+            letter-spacing: -0.025em !important;
+        }
+    }
+    h1,
+    .h1 {
+        line-height: 1.16;
+    }
+
+    h4,
+    .h4 {
+        line-height: 1.33;
+    }
+
+    h5,
+    .h5 {
+        line-height: 1.4;
+        letter-spacing: -0.015em;
+    }
+}
+
+.home-data-driven {
+    h4,
+    .h4 {
+        line-height: 1.5;
+    }
+}
+
+.home-coaching-service {
+    h3,
+    .h3 {
+        line-height: 1.3;
+    }
+}
+
+.home-project-manage {
+    .h4,
+    h4 {
+        line-height: 1.6;
+    }
+}
+
+.home-codebase {
+    // Typography
+    .display-6 {
+        line-height: 1.25;
+    }
+
+    h1,
+    .h1 {
+        line-height: 1.3;
+    }
+    h2,
+    .h2 {
+        line-height: 1.5;
+    }
+
+    // colors
+
+    .badge {
+        background: $nk-gradient-20;
+    }
+
+    .btn {
+        &-primary {
+            background: $nk-gradient-20;
+        }
+    }
+
+    .nk-nav {
+        .badge {
+            color: #fff !important;
+            background: $primary !important;
+        }
+    }
+}
+
+.home-business-analytics {
+    .display {
+        &-2 {
+            line-height: 1.21;
+        }
+    }
+}
+
+.home-business-management {
+    .swiper {
+        &-pagination-bullet {
+            background-color: $nk-gray-50 !important;
+            &-active {
+                background-color: $primary !important;
+            }
+        }
+    }
+}

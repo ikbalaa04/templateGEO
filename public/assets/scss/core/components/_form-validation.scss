@@ -1,0 +1,27 @@
+.nk {
+  &-error {
+    input,
+    input:active {
+      border-color: rgba(255, 0, 0, 0.6);
+      background-color: #fdd4d46e !important;
+
+      &::placeholder {
+        color: $darker;
+      }
+    }
+  }
+
+  &-message {
+    left: 0;
+    font-weight: bold;
+    position: absolute;
+    font-size: 12px;
+    line-height: 1rem;
+    top: calc(100% + 6px);
+    display: inline-block;
+
+    &-error {
+      color: rgba(255, 0, 0, 0.6);
+    }
+  }
+}

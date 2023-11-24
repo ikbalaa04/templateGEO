@@ -1,0 +1,33 @@
+.logo{
+    &-wrap{
+        display: inline-flex;
+        position: relative;
+    }
+    &-link{
+        display: inline-flex;
+    }
+    &-img{
+        height: 100%;
+        &:not(:first-child){
+            position: absolute;
+            left: 0;
+        }
+    }
+    &-light{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.is-theme{
+    .logo{
+        &-light{
+            opacity: 1;
+            visibility: visible;
+        }
+        &-dark{
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}

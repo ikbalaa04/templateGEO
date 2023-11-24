@@ -1,0 +1,21 @@
+.#{$nk-course-overview-class}{
+    &-list{
+        display: flex;
+        align-items: center;
+    }
+    &-media + .#{$nk-course-overview-class}-content{
+        margin-left: $nk-course-overview-content-gap-x;
+    }
+    &-media{
+        .icon{
+            color: $nk-course-overview-icon-color;
+            font-size: $nk-course-overview-icon-font-size;
+        }
+    }
+    &-content{
+        .title{
+            font-weight: $nk-course-overview-title-font-weight;
+            color: $nk-course-overview-title-color;
+        }
+    }
+}

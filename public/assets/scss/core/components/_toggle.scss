@@ -1,0 +1,10 @@
+.password-toggle{
+    &.is-shown{
+        .on{
+            display: none;
+        }
+        .off{
+            display: block;
+        }
+    }
+}

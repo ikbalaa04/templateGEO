@@ -1,0 +1,26 @@
+.nk-tag{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: -.5rem;
+    >*{
+        padding: .5rem;
+    }
+    &-item{
+        background-color: $tag-item-bg;
+        border: $tag-item-border;
+        border-radius: $tag-item-border-radius;
+        padding: $tag-item-padding-y $tag-item-padding-x;
+        color: $tag-item-color;
+        font-size: $tag-item-font-size;
+        font-weight: $tag-item-font-weight;
+        display: block;
+        text-transform: $tag-item-text-transform;
+        letter-spacing: $tag-item-letter-spacing;
+        &:hover{
+            background-color: $tag-item-hover-bg;
+            color: $tag-item-hover-color;
+            border-color: $tag-item-hover-border-color;
+        }
+    }
+}

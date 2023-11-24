@@ -1,0 +1,20 @@
+@each $color, $value in $nk-theme-colors {
+    .bg-#{$color} {
+        background-color: $value !important;
+    }
+
+    .text-bg-#{$color} {
+        background-color: $value !important;
+    }
+}
+
+.bg-primary-gradient {
+    background: $bg-primary-gradient;
+}
+
+.bg-primary-gradient-soft {
+    background: $bg-primary-gradient-soft;
+}
+.bg-primary-dark {
+    background-color: $accent-color-dark;
+}

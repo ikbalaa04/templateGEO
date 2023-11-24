@@ -1,0 +1,13 @@
+.rating{
+    display: flex;
+    align-items: center;
+    margin: -3px;
+    >*{
+        padding: 3px;
+    }
+    &-label{
+        &.checked{
+            color: $yellow;
+        }
+    }
+}

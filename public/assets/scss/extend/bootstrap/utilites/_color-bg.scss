@@ -1,0 +1,49 @@
+@mixin text-bg-soft-variant($color, $background: mix($color, $white, 12%), $border: transparent) {
+    color: #{$color} !important;
+    background-color: #{$background} !important;
+    border-color: #{$border};
+}
+
+@mixin text-bg-dark-variant($color, $background: mix($color, $white, 100%), $border: transparent) {
+    color: #fff !important;
+    background-color: #{$background} !important;
+    border-color: #{$border};
+}
+
+@mixin bg-soft-variant($color, $background: mix($color, $white, 24%)) {
+    background-color: #{$background};
+}
+
+@each $color, $value in $theme-colors {
+    .btn-#{$color}-soft {
+        @include text-bg-soft-variant($value);
+    }
+
+    .bg-#{$color}-soft {
+        @include bg-soft-variant($value);
+    }
+
+    .text-bg-#{$color}-soft {
+        @include text-bg-soft-variant($value);
+    }
+
+    .text-bg-#{$color}-dark {
+        @include text-bg-dark-variant($value);
+    }
+}
+
+@each $color, $value in $nk-theme-colors {
+    .text-bg-#{$color}-soft {
+        @include text-bg-soft-variant($value);
+    }
+
+    .text-bg-#{$color}-dark {
+        @include text-bg-dark-variant($value);
+    }
+}
+
+@each $color, $value in $nk-theme-gradient-colors {
+    .bg-gradient-#{$color} {
+        background: $value;
+    }
+}

@@ -1,0 +1,91 @@
+.nk-block {
+    &-title + .nk-block-text {
+        margin-top: 1rem;
+    }
+
+    &-title {
+        margin: 0.75rem 0px;
+        letter-spacing: -0.025rem;
+        text-transform: capitalize;
+        br {
+            display: none;
+        }
+        span {
+            color: $primary;
+        }
+    }
+
+    &-text {
+        margin: 0px;
+        font-size: 1rem;
+        line-height: 1.625rem;
+        letter-spacing: -0.01em;
+    }
+
+    &-head {
+        margin-bottom: 3.75rem;
+
+        &-between {
+            display: flex;
+            justify-content: space-between;
+        }
+        &.sm {
+            margin-bottom: 1.875rem;
+        }
+        &.md {
+            margin-bottom: 1.875rem;
+        }
+        &.lg {
+            margin-bottom: 6.25rem;
+        }
+
+        &-content {
+            margin-bottom: 3.75rem;
+            .nk-block-text {
+                margin-top: 0px !important;
+            }
+        }
+    }
+
+    &-actions {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.nk-split {
+    &-page {
+        display: flex;
+        min-height: 100vh;
+    }
+    &-col {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+    }
+}
+
+// responsive breakpoints
+@include media-breakpoint-up(md) {
+    .nk-block {
+        &-text {
+            max-width: 75%;
+            margin: 0px auto;
+            font-size: 1.25rem;
+            line-height: 2rem;
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .nk-block {
+        &-title {
+            br {
+                display: inline-block;
+            }
+        }
+
+        &-text {
+            max-width: 85%;
+        }
+    }
+}

@@ -1,0 +1,172 @@
+.#{$nk-schedule-class} {
+    &-item {
+        padding-top: $nk-schedule-item-gap-y;
+        padding-bottom: $nk-schedule-item-gap-y;
+        overflow: hidden;
+        &:not(:last-child) .nk-schedule-item-inner {
+            padding-bottom: $nk-schedule-item-inner-gap;
+        }
+        &-inner {
+            display: flex;
+        }
+        &:last-child {
+            .#{$nk-schedule-class}-symbol {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &-symbol {
+        position: relative;
+        align-self: flex-start;
+        display: inline-flex;
+        &::before {
+            position: absolute;
+            content: "";
+            top: calc(100% + $nk-schedule-item-gap-y);
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100rem;
+            background-color: $nk-schedule-symbol-before-bg;
+            z-index: 1;
+            opacity: $nk-schedule-symbol-before-opacity;
+        }
+        + .#{$nk-schedule-class}-content {
+            padding-left: $nk-schedule-content-gap;
+        }
+    }
+
+    &-center {
+        .nk-schedule-item-inner {
+            align-items: center;
+        }
+    }
+
+    &-s1 {
+        .#{$nk-schedule-class} {
+            &-item {
+                overflow: inherit;
+                padding-top: 0;
+                padding-bottom: $nk-schedule-s1-item-gap-y;
+                &-inner {
+                    align-items: center;
+                }
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
+            &-symbol {
+                display: none;
+                margin-left: -$nk-schedule-s1-symbol-negative-gap;
+
+                &::before {
+                    display: none;
+                }
+            }
+            &-content {
+                padding-left: 0px;
+            }
+        }
+    }
+    &-s2 {
+        .#{$nk-schedule-class} {
+            &-item {
+                padding-top: 0;
+                padding-bottom: $nk-schedule-s2-item-gap-y;
+                position: relative;
+                overflow: inherit;
+                &:not(:last-child) .nk-schedule-item-inner {
+                    padding-bottom: 0;
+                }
+                &:last-child {
+                    padding-bottom: 0;
+                    &::after {
+                        display: none;
+                    }
+                }
+                &::after {
+                    position: absolute;
+                    top: $nk-schedule-s2-item-after-top;
+                    left: $nk-schedule-s2-item-after-left;
+                    content: "";
+                    height: 100%;
+                    border-left: $nk-schedule-s2-item-after-border;
+                    opacity: $nk-schedule-s2-item-after-opaticy;
+                }
+            }
+            &-symbol {
+                align-self: inherit;
+                margin-top: $nk-schedule-s2-symbol-margin-y;
+                + .#{$nk-schedule-class}-content {
+                    padding-left: $nk-schedule-s2-content-gap;
+                }
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-s3 {
+        .#{$nk-schedule-class} {
+            &-item {
+                .#{$nk-schedule-class}-symbol {
+                    &::before {
+                        top: 100%;
+                    }
+                }
+                &:nth-last-child(2) {
+                    .#{$nk-schedule-class}-symbol {
+                        &::before {
+                            width: 0px;
+                            background-color: transparent;
+                            border: 1px dashed $nk-schedule-symbol-before-bg;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-s4 {
+        .#{$nk-schedule-class} {
+            &-symbol {
+                &::before {
+                    content: none;
+                }
+            }
+        }
+    }
+}
+
+// responsive breakpoints
+
+@include media-breakpoint-up(sm) {
+    .#{$nk-schedule-class} {
+        &-s1 {
+            border-left: $nk-schedule-s1-border;
+            .#{$nk-schedule-class} {
+                &-symbol {
+                    display: inline-flex;
+                }
+                &-content {
+                    padding-left: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .#{$nk-schedule-class} {
+        &-s1 {
+            .#{$nk-schedule-class} {
+                &-content {
+                    padding-left: $nk-schedule-s1-content-gap;
+                }
+            }
+        }
+    }
+}

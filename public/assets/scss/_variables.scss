@@ -1,0 +1,1547 @@
+////////////////////////////////////////////////////////
+////////     CORE VARIABLES    ///// //////////
+////////////////////////////////////////////////////////
+
+@use "sass:map";
+@use "sass:math";
+
+$assetsRoot: "../../assets/images/";
+
+/////////    COLORS    ///////////
+//////////////////////////////////////
+
+$white: #fff;
+$black: #000;
+$red: #fa5b68;
+$gray: #f7f8f9;
+$blue: #0062ff;
+$cyan: #00ffd5;
+$green: #22c55e;
+$yellow: #fdb52a;
+$purple: #6e61f3;
+$orange: #fdd6c8;
+
+$nk-gray: $gray;
+$nk-gray-50: #e5e7eb;
+$nk-gray-100: #faf9ff;
+$nk-gray-200: #f2f8fb;
+$nk-gray-300: #f9f7fa;
+$nk-gray-400: #faf9f4;
+$nk-gray-500: #c9c9d4;
+$nk-gray-600: #c5c5ca;
+$nk-gray-700: #adb5bd;
+$nk-gray-800: #64728f;
+$nk-gray-900: #495057;
+$nk-gray-1000: #2b292c;
+$nk-gray-1100: #0f0f12;
+$nk-gray-1200: #0a1425;
+$nk-gray-1300: #181921;
+$nk-gray-1400: #232340;
+
+$nk-red: $red;
+$nk-red-50: #feebed;
+
+$nk-yellow: $yellow;
+$nk-yellow-50: #fef6ea;
+$nk-yellow-100: #fdeaba;
+$nk-yellow-200: #ffde70;
+
+$nk-green: $green;
+$nk-green-50: #e9f9ef;
+$nk-green-100: #f0f6f5;
+$nk-green-200: #dcfce7;
+$nk-green-300: #bde5d3;
+$nk-green-400: #45c9c1;
+$nk-green-500: #0acf83;
+$nk-green-600: #54a8c7;
+$nk-green-700: #2a9d8f;
+$nk-green-800: #071a17;
+
+$nk-blue: $blue;
+$nk-blue-50: #f4f8ff;
+$nk-blue-100: #ebf2ff;
+$nk-blue-200: #f3f4ff;
+$nk-blue-300: #eaefff;
+$nk-blue-400: #e7fbff;
+$nk-blue-500: #e8ebff;
+$nk-blue-600: #f9faff;
+$nk-blue-700: #c3c9f1;
+$nk-blue-800: #6472b9;
+$nk-blue-900: #8c9bff;
+$nk-blue-1000: #589bff;
+$nk-blue-1100: #6576ff;
+$nk-blue-1200: #3f78e0;
+$nk-blue-1300: #6366f1;
+$nk-blue-1400: #3f53d8;
+$nk-blue-1500: #2b5cfd;
+$nk-blue-1600: #3b3482;
+$nk-blue-1700: #172166;
+$nk-blue-1800: #122544;
+$nk-blue-1900: #141834;
+$nk-blue-2000: #080829;
+$nk-blue-2100: #080230;
+
+$nk-purple: $purple;
+$nk-purple-50: #eeecff;
+$nk-purple-100: #fceff4;
+$nk-purple-200: #edebfe;
+$nk-purple-300: #e1cbfd;
+$nk-purple-400: #ffc8cc;
+$nk-purple-500: #eb7ca6;
+$nk-purple-600: #9d90f1;
+$nk-purple-700: #9097f7;
+$nk-purple-800: #725efe;
+
+$nk-cyan: $cyan;
+$nk-cyan-50: #c0f2fd;
+$nk-cyan-100: #97f2ff;
+$nk-cyan-200: #13d5ff;
+
+$nk-orange: $orange;
+$nk-orange-100: #ef652a;
+
+$nk-violet-300: $nk-blue-400;
+
+$dark-blue: #080829;
+$darker: $nk-gray-1200;
+$nk-dark-600: #1c2b43;
+
+// // Base color
+$primary: $nk-blue-1500;
+$secondary: $nk-dark-600;
+
+// // normal layout colors
+$normal-layout-primary: $primary;
+$normal-layout-gray-light: $nk-gray;
+$normal-layout-dark-900: $nk-blue-900;
+$normal-layout-secondary: $nk-blue-800;
+$normal-layout-primary-4: $nk-green-600;
+$normal-layout-primary-light: $nk-purple-200;
+$normal-layout-secondary-light: $nk-gray-300;
+
+// Based - Default Color Used For Text
+$accent-color: $primary;
+$accent-color-dark: $nk-blue-1300;
+$base-color: $nk-gray-1200;
+$base-text: $nk-gray-800;
+
+$nk-body-bg: $white;
+$nk-body-color: $nk-gray-900;
+
+$lighter: $nk-gray-50;
+$gray-light: $nk-gray;
+
+// // primary colors
+$primary-100: $nk-blue-300;
+$primary-200: $nk-blue-600;
+$primary-400: $nk-blue-900;
+
+$nk-theme-colors: (
+  "primary": $primary,
+  "primary-100": $primary-100,
+  "secondary": $secondary,
+  "gray": $gray,
+  "gray-50": $nk-gray-50,
+  "gray-100": $nk-gray-100,
+  "gray-200": $nk-gray-200,
+  "gray-300": $nk-gray-300,
+  "gray-400": $nk-gray-400,
+  "gray-500": $nk-gray-500,
+  "gray-600": $nk-gray-600,
+  "gray-700": $nk-gray-700,
+  "gray-800": $nk-gray-800,
+  "gray-900": $nk-gray-900,
+  "gray-1000": $nk-gray-1000,
+  "gray-1100": $nk-gray-1100,
+  "gray-1200": $nk-gray-1200,
+  "gray-1300": $nk-gray-1300,
+  "gray-1400": $nk-gray-1400,
+  "red": $red,
+  "red-50": $nk-red-50,
+  "yellow": $yellow,
+  "yellow-50": $nk-yellow-50,
+  "yellow-100": $nk-yellow-100,
+  "yellow-200": $nk-yellow-200,
+  "green": $green,
+  "green-50": $nk-green-50,
+  "green-100": $nk-green-100,
+  "green-200": $nk-green-200,
+  "green-300": $nk-green-300,
+  "green-400": $nk-green-400,
+  "green-500": $nk-green-500,
+  "green-600": $nk-green-600,
+  "green-700": $nk-green-700,
+  "green-800": $nk-green-800,
+  "blue": $blue,
+  "blue-50": $nk-blue-50,
+  "blue-100": $nk-blue-100,
+  "blue-200": $nk-blue-200,
+  "blue-300": $nk-blue-300,
+  "blue-400": $nk-blue-400,
+  "blue-500": $nk-blue-500,
+  "blue-600": $nk-blue-600,
+  "blue-700": $nk-blue-700,
+  "blue-800": $nk-blue-800,
+  "blue-900": $nk-blue-900,
+  "blue-1000": $nk-blue-1000,
+  "blue-1100": $nk-blue-1100,
+  "blue-1200": $nk-blue-1200,
+  "blue-1300": $nk-blue-1300,
+  "blue-1400": $nk-blue-1400,
+  "blue-1500": $nk-blue-1500,
+  "blue-1600": $nk-blue-1600,
+  "blue-1700": $nk-blue-1700,
+  "blue-1800": $nk-blue-1800,
+  "blue-1900": $nk-blue-1900,
+  "blue-2000": $nk-blue-2000,
+  "purple": $purple,
+  "purple-50": $nk-purple-50,
+  "purple-100": $nk-purple-100,
+  "purple-200": $nk-purple-200,
+  "purple-300": $nk-purple-300,
+  "purple-400": $nk-purple-400,
+  "purple-500": $nk-purple-500,
+  "purple-600": $nk-purple-600,
+  "purple-700": $nk-purple-700,
+  "purple-800": $nk-purple-800,
+  "cyan": $cyan,
+  "cyan-50": $nk-cyan-50,
+  "cyan-100": $nk-cyan-100,
+  "cyan-200": $nk-cyan-200,
+  "orange": $nk-orange,
+  "orange-100": $nk-orange-100,
+);
+
+$nk-gradient-1: linear-gradient(214.72deg, #0c073f 20.47%, #130b6a 78.66%);
+$nk-gradient-2: linear-gradient(157.5deg, #120183 14.64%, #0066ff 114.76%);
+$nk-gradient-3: linear-gradient(180deg, #4628ff 0%, #6d55ff 100%);
+$nk-gradient-4: linear-gradient(269.03deg, rgba(114, 94, 254, 0) 0%, #725efe 49.86%, rgba(114, 94, 254, 0) 99.72%);
+$nk-gradient-5: linear-gradient(180deg, #fa5b68 0%, #725efe 100%);
+$nk-gradient-6: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+$nk-gradient-7: linear-gradient(180deg, #6576ff 0%, rgba(255, 255, 255, 0) 100%);
+$nk-gradient-8: linear-gradient(140.41deg, #2b5cfd 27.37%, #1d3faf 72.63%);
+$nk-gradient-9: linear-gradient(23.01deg, #2b5cfd 14.9%, #1d3faf 85.1%);
+$nk-gradient-10: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 86.98%);
+$nk-gradient-11: linear-gradient(180deg, #3f53d8 0%, #8c9bff 100%);
+$nk-gradient-12: linear-gradient(180deg, #589bff 0%, #fa5b68 100%);
+$nk-gradient-13: linear-gradient(180deg, #e3edff 0%, rgba(255, 255, 255, 0) 100%);
+$nk-gradient-14: linear-gradient(180deg, #97f2ff 0%, rgba(151, 242, 255, 0) 100%);
+$nk-gradient-15: linear-gradient(180deg, #0acf83 0%, rgba(10, 207, 131, 0) 0.01%, rgba(10, 207, 131, 0.16) 100%);
+$nk-gradient-16: linear-gradient(180deg, #0a1425 0%, #0a1425 0.01%, #1c2d4f 100%);
+$nk-gradient-17: linear-gradient(180deg, #feebed -0.03%, #ffc7cb 99.93%);
+$nk-gradient-18: linear-gradient(0deg, rgba(59, 52, 130, 0) 0%, #3b3482 72.97%);
+$nk-gradient-19: linear-gradient(180deg, #217ea0 0%, #54a8c7 100%);
+$nk-gradient-20: linear-gradient(90deg, #9097f7 0%, #64a2f9 100%);
+$nk-gradient-21: linear-gradient(208.41deg, #8c9dff 0%, #a89bfb 39.92%, #7ec9ff 82.42%);
+$nk-gradient-22: linear-gradient(276.37deg, #5cc1ff 5.91%, #6754f3 50.33%, #c4b9ff 94.75%);
+$nk-gradient-23: linear-gradient(276.7deg, #d627af 4.7%, #fd7258 55.39%);
+$nk-gradient-24: linear-gradient(276.86deg, #65d995 4.93%, #30a390 41.37%);
+$nk-gradient-25: linear-gradient(147.84deg, #faf9f4 42.86%, rgba(190, 247, 252, 0.1) 102.04%);
+$nk-gradient-26: linear-gradient(98.64deg, #524a90 0%, rgba(255, 116, 104, 0.21) 57.39%);
+$nk-gradient-27: linear-gradient(
+  180deg,
+  rgba(255, 255, 255, 0.24) -0.02%,
+  rgba(152, 151, 226, 0.24) 52.6%,
+  #b6e3ff 100%
+);
+$nk-gradient-28: linear-gradient(
+  101.8deg,
+  rgba(199, 204, 255, 0.9) 0%,
+  rgba(211, 216, 255, 0.9) 50%,
+  rgba(191, 198, 255, 0.9) 100%
+);
+
+// // primary gradient
+$bg-primary-gradient: $nk-gradient-9;
+$bg-primary-gradient-soft: $nk-gradient-13;
+
+$nk-theme-gradient-colors: (
+  "1": $nk-gradient-1,
+  "2": $nk-gradient-2,
+  "3": $nk-gradient-3,
+  "4": $nk-gradient-4,
+  "5": $nk-gradient-5,
+  "6": $nk-gradient-6,
+  "7": $nk-gradient-7,
+  "8": $nk-gradient-8,
+  "9": $nk-gradient-9,
+  "10": $nk-gradient-10,
+  "11": $nk-gradient-11,
+  "12": $nk-gradient-12,
+  "13": $nk-gradient-13,
+  "14": $nk-gradient-14,
+  "15": $nk-gradient-15,
+  "16": $nk-gradient-16,
+  "17": $nk-gradient-17,
+  "18": $nk-gradient-18,
+  "19": $nk-gradient-19,
+  "20": $nk-gradient-20,
+  "21": $nk-gradient-21,
+  "22": $nk-gradient-22,
+  "23": $nk-gradient-23,
+  "24": $nk-gradient-24,
+  "25": $nk-gradient-25,
+  "26": $nk-gradient-26,
+  "27": $nk-gradient-27,
+);
+
+/////////    TYPOGRAPHY    //////////
+//////////////////////////////////////
+$nk-font-family-sans-serif: "Plus Jakarta Sans", sans-serif;
+$nk-font-family-sans-serif-secondary: "Roboto", sans-serif;
+
+$nk-font-size-base: 1rem;
+$font-size-sm: $nk-font-size-base * 0.875;
+$font-size-lg: $nk-font-size-base * 1.25;
+
+$body-font-weight: 400;
+
+$nk-line-height-base: 1.5;
+$nk-line-height-sm: 1.25;
+$nk-line-height-lg: 2;
+
+$nk-font-weight-normal: 400;
+$nk-font-weight-medium: 500;
+$nk-font-weight-semibold: 600;
+$nk-font-weight-bold: bold;
+
+$nk-font-weight-base: $nk-font-weight-normal;
+
+$nk-h1-font-size: 3rem; // 48px
+$nk-h2-font-size: 2.5rem; // 40px
+$nk-h3-font-size: 2rem; // 32px
+$nk-h4-font-size: 1.5rem; // 24px
+$nk-h5-font-size: 1.25rem; // 20px
+$nk-h6-font-size: 1.125rem; // 18px
+
+$nk-display-font-family: null;
+$nk-display-font-style: null;
+$nk-display-font-weight: 700;
+$nk-display-line-height: 1.32;
+
+$nk-lead-font-size: 1.25rem;
+$nk-lead-font-weight: 400;
+$nk-lead-line-height: 1.6;
+$nk-lead-letter-spacing: 0.01em;
+
+// scss-docs-start display-headings
+$nk-display-font-sizes: (
+  1: 6.5rem,
+  2: 6rem,
+  3: 5.5rem,
+  4: 5rem,
+  5: 4.5rem,
+  6: 4rem,
+);
+
+// text
+$lead-text-color: $base-color;
+$lead-text-font-weight: $nk-font-weight-bold;
+
+$sub-text-color: $base-text;
+$sub-text-font-size: 0.75rem;
+$sub-text-font-weight: $nk-font-weight-medium;
+
+$smaller-font-size: 0.75rem;
+$text-base: $nk-gray-800;
+$text-light: $base-text;
+
+// icon size
+$icon-size-md: 1.625rem; // 26px
+$icon-size-lg: 2.25rem; // 36px
+
+// borders
+$nk-border-width: 1px;
+$hr-border-width: $nk-border-width;
+
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+);
+
+$border-color: $nk-gray-50;
+$border-light: #e5e7eb;
+
+$hr-border-color: $border-color;
+// border radius
+$nk-border-radius: 0.5rem;
+$nk-border-radius-sm: 0.25rem;
+$nk-border-radius-lg: 0.75rem;
+$nk-border-radius-xl: 1.5rem;
+$nk-border-radius-2xl: 2rem;
+$nk-border-radius-pill: 50rem;
+
+// sizes
+$sizes: (
+  "xs": 2rem,
+  // 32px
+  "sm": 2.5rem,
+  // 40px
+  "md": 3rem,
+  // 48px
+  "rg": 3.25rem,
+  // 52px
+  "lg": 4rem,
+  // 64px
+  "xl": 5.625rem,
+  // 90px
+  "xxl": 6.25rem
+    // 100px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+);
+
+$size-xs: map.get($sizes, xs);
+$size-sm: map.get($sizes, sm);
+$size-md: map.get($sizes, md);
+$size-rg: map.get($sizes, rg);
+$size-lg: map.get($sizes, lg);
+$size-xl: map.get($sizes, xl);
+$size-xxl: map.get($sizes, xxl);
+
+////////// GAP /////////
+$nk-grid-gutter-width: 1.875rem;
+$nk-spacer: 1rem;
+$nk-spacers: (
+  0: 0,
+  1: $nk-spacer * 0.375,
+  2: $nk-spacer * 0.75,
+  3: $nk-spacer,
+  4: $nk-spacer * 1.5,
+  5: $nk-spacer * 1.875,
+  6: $nk-spacer * 3,
+  7: $nk-spacer * 3.75,
+  8: $nk-spacer * 5,
+  9: $nk-spacer * 7,
+  "gs": $nk-grid-gutter-width,
+);
+
+// Rotate \\
+$nk-rotate-0: 0deg;
+$nk-rotate-45: 45deg;
+$nk-rotate-90: 90deg;
+$nk-rotate-180: 180deg;
+
+$rotates: (
+  0: $nk-rotate-0,
+  45: $nk-rotate-45,
+  90: $nk-rotate-90,
+  180: $nk-rotate-180,
+);
+
+/////////    REBOOT    //////////
+//////////////////////////////////////
+$nk-hr-border-color: $primary-100;
+$nk-hr-border-width: $nk-border-width;
+$nk-hr-opacity: 1;
+
+/////////     SPACING    //////////
+//////////////////////////////////////
+$space-sm: 3.75rem;
+$space-lg: 7.5rem;
+$space-30: 1.875rem;
+$space-60: $space-sm;
+$space-70: 4.375rem;
+$space-80: 5rem;
+$space-100: 6.25rem;
+$space-120: 7.5rem;
+$space-160: 10rem;
+$space-180: 11.25rem;
+$space-200: 12.5rem;
+$space-220: 13.75rem;
+$space-240: 15rem;
+$space-310: 19.375rem;
+$section-space: $space-sm;
+$section-space-lg: $space-lg;
+
+$nk-space: (
+  "0": 0,
+  "sm": $space-sm,
+  "lg": $space-lg,
+  "30": $space-30,
+  "60": $space-60,
+  "70": $space-70,
+  "80": $space-80,
+  "100": $space-100,
+  "120": $space-120,
+  "160": $space-160,
+  "180": $space-180,
+  "200": $space-200,
+  "220": $space-220,
+  "240": $space-240,
+  "310": $space-310,
+);
+
+////////// MEDIA  /////////
+$media-text-gap-x: 0.75rem;
+$media-text-text-gap-x: 1.5rem;
+
+$media-text-gap-x-md: 1.75rem;
+
+$media-border-radius: 0.5rem;
+$media-border-radius-xl: 1.5rem;
+$media-rounded-radius: $media-border-radius * 2;
+$media-circle-radius: $nk-border-radius-pill;
+$media-border-color: $border-light;
+$media-negative-start-gap: 0.75rem;
+
+/////////   LIST    //////////
+//////////////////////////////////////
+$list-meta-item-font-size: 0.875rem;
+$list-meta-item-gap-x: 1.5rem;
+$list-meta-link-color: $base-text;
+$list-meta-link-hover-color: $accent-color;
+
+$list-link-color: $base-text;
+$list-link-hover-color: $accent-color;
+$list-link-item-gap-y: 0.625rem;
+
+$list-separator-bg: $accent-color;
+$list-separator-width: 5px;
+$list-separator-height: 1px;
+
+$list-link-flush-item-gap-y: 1rem;
+$list-link-flush-item-border: 1px solid $border-light;
+
+// page link
+$list-link-page-item-font-weight: 600;
+$list-link-page-link-color: $base-color;
+$list-link-page-link-active-color: $accent-color;
+
+/////////   SOCIAL LINKS    //////////
+//////////////////////////////////////
+$social-link-color: $base-color;
+$social-link-active-color: $accent-color;
+$social-link-hover-color: $accent-color;
+$social-link-icon-font-size: 1.625rem;
+
+/////////   TESTIMONIAL   //////////
+//////////////////////////////////////
+$testimonial-card-bg: $nk-gray;
+$testimonial-card-border: 0px solid $nk-gray-100;
+$testimonial-card-border-radius: 1rem;
+$testimonial-card-gap: 3rem;
+$testimonial-card-gap-sm: 1.5rem;
+$testimonial-card-content-gap: 3rem;
+$testimonial-card-box-shadow: -4px -4px 36px rgba(192, 192, 192, 0.12), 4px 4px 36px rgba(192, 192, 192, 0.16);
+$testimonial-card-icon-font-size: 5.25rem;
+$testimonial-card-icon-background-color: linear-gradient(180deg, #3f53d8 0%, #8c9bff 100%);
+
+// testimonial s1
+$testimonial-card-s1-bg-padding: 2rem;
+$testimonial-card-s1-cover-radius: 0.75rem;
+$testimonial-card-s1-quote-icon-color: linear-gradient(180deg, #3f53d8 0%, #8c9bff 100%);
+$testimonial-card-s1-bg: $accent-color-dark;
+$testimonial-card-s1-theme-color: $white;
+$testimonial-card-s1-gap: 2rem;
+$testimonial-card-cover-bg-color: mix($primary, $white, 20%);
+
+// testimonial s2
+$testimonial-card-s2-gap: 3rem;
+
+// testimonial s3
+$testimonial-card-s3-border-radius: $nk-border-radius;
+$testimonial-card-s3-text-color: $base-color;
+$testimonial-card-s3-box-shadow: -4px -4px 10px rgba(192, 192, 192, 0.12), 4px 4px 10px rgba(192, 192, 192, 0.16);
+$testimonial-card-s3-icon-font-size: 5.25rem;
+
+// testimonial s5
+$testimonial-card-s5-padding: 3.75rem;
+$testimonial-card-s5-border-radius: 0px 0px 1.5rem 1.5rem;
+$testimonial-card-s5-box-shadow: 4px 4px 36px 0px #c0c0c029, -4px -4px 36px 0px #c0c0c01f;
+
+/////////   TIMELINE   //////////
+//////////////////////////////////////
+$nk-timeline-class: "nk-timeline";
+$nk-timeline-item-gap: 1.625rem;
+$nk-timeline-symbol: 0.625rem;
+$nk-timeline-symbol-line: 0.125rem;
+
+$nk-timeline-symbol-bg: $accent-color;
+$nk-timeline-symbol-bg-1: $yellow;
+$nk-timeline-symbol-bg-2: $red;
+
+$nk-timeline-symbol-box-shadow: 0 0 0 0.25rem mix($nk-timeline-symbol-bg, $white, 10%);
+$nk-timeline-symbol-box-shadow-1: 0 0 0 0.25rem mix($nk-timeline-symbol-bg-1, $white, 10%);
+$nk-timeline-symbol-box-shadow-2: 0 0 0 0.25rem mix($nk-timeline-symbol-bg-2, $white, 10%);
+
+/////////    SWIPER    //////////
+//////////////////////////////////////
+$swiper-navigation-font-size: 1.75rem;
+$swiper-navigation-width: 3.375rem;
+$swiper-navigation-height: 3.375rem;
+$swiper-navigation-border-radius: $nk-border-radius-pill;
+$swiper-navigation-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+$swiper-navigation-color: $base-color;
+$swiper-navigation-bg: $white;
+$swiper-navigation-hover-bg: $accent-color;
+$swiper-navigation-hover-color: $white;
+
+$swiper-navigation-has-bg: $nk-gray-100;
+$swiper-navigation-has-color: $base-color;
+
+$swiper-pagination-bullet-width: 12px;
+$swiper-pagination-bullet-height: 12px;
+$swiper-pagination-bullet-inactive-color: $base-color;
+$swiper-pagination-bullet-active-color: $accent-color;
+$swiper-pagination-bullet-opacity: 0.2;
+$swiper-pagination-bullet-active-opacity: 1;
+
+// theme colors
+$swiper-pagination-bullet-inactive-color-on-theme: $gray;
+$swiper-pagination-bullet-active-color-on-theme: $normal-layout-secondary;
+
+$swiper-navigation-has-bg-on-theme: rgba($white, 0.2);
+$swiper-navigation-has-color-on-theme: $white;
+$swiper-navigation-has-bg-on-theme-hover-bg: $white;
+$swiper-navigation-has-bg-on-theme-hover-color: $base-color;
+
+// centered slide
+$swiper-s2-slide-width: 870px;
+$swiper-s2-slide-inactive: 0.7;
+
+// swiper pagination s1
+$swiper-pagination-s1-bullet-width: 48px;
+$swiper-pagination-s1-bullet-height: 4px;
+$swiper-pagination-s1-bullet-inactive-color: $nk-gray-100;
+$swiper-pagination-s1-bullet-active-color: $accent-color;
+$swiper-pagination-s1-bullet-border-radius: 2px;
+
+/////////    INTEGRATE    //////////
+//////////////////////////////////////
+$integrate-brand-bg: $white;
+$integrate-brand-border-radius: $nk-border-radius-pill;
+
+/////////    INPUT BTN    //////////
+//////////////////////////////////////
+$nk-input-btn-padding-y: 0.688rem;
+$nk-input-btn-padding-x: 1.5rem;
+$nk-input-btn-font-family: null;
+$nk-input-btn-font-size: 1rem;
+$nk-input-btn-line-height: 1.75;
+$nk-input-btn-font-weight: 600;
+
+$nk-input-btn-focus-width: 0.25rem;
+$nk-input-btn-focus-color-opacity: 0.25;
+$nk-input-btn-focus-color: rgba($accent-color, 0.65);
+$nk-input-btn-focus-blur: 0;
+$nk-input-btn-focus-box-shadow: 0 0 5px 0px rgba(95, 56, 249, 0.2);
+$nk-input-btn-hover-color: $accent-color;
+
+$nk-input-btn-padding-y-sm: 0.25rem;
+$nk-input-btn-padding-x-sm: 0.5rem;
+$nk-input-btn-font-size-sm: $font-size-sm;
+
+$nk-input-btn-padding-y-lg: 0.5rem;
+$nk-input-btn-padding-x-lg: 1rem;
+$nk-input-btn-font-size-lg: $font-size-lg;
+
+$nk-input-btn-border-width: $nk-border-width;
+$nk-input-btn-border-radius: $nk-border-radius;
+
+/////////   INPUT    //////////
+//////////////////////////////////////
+$nk-input-padding-y: $nk-input-btn-padding-y;
+$nk-input-padding-x: $nk-input-btn-padding-x;
+$nk-input-font-family: $nk-input-btn-font-family;
+$nk-input-font-size: $nk-input-btn-font-size;
+$nk-input-font-weight: $nk-font-weight-base;
+$nk-input-line-height: $nk-input-btn-line-height;
+
+$nk-input-padding-y-sm: $nk-input-btn-padding-y-sm;
+$nk-input-padding-x-sm: $nk-input-btn-padding-x-sm;
+$nk-input-font-size-sm: $nk-input-btn-font-size-sm;
+
+$nk-input-padding-y-lg: $nk-input-btn-padding-y-lg;
+$nk-input-padding-x-lg: $nk-input-btn-padding-x-lg;
+$nk-input-font-size-lg: $nk-input-btn-font-size-lg;
+
+$nk-input-bg: $nk-body-bg;
+$nk-input-disabled-color: null;
+$nk-input-disabled-bg: $nk-gray-200;
+$nk-input-disabled-border-color: null;
+
+$nk-input-color: $nk-body-color;
+$nk-input-border-color: $border-light;
+$nk-input-border-width: $nk-input-btn-border-width;
+$nk-input-box-shadow: none;
+
+$nk-input-border-radius: $nk-input-btn-border-radius;
+$nk-input-border-radius-sm: $nk-border-radius-sm;
+$nk-input-border-radius-lg: $nk-border-radius-lg;
+
+$nk-input-focus-bg: $nk-input-bg;
+$nk-input-focus-border-color: rgba($accent-color, 0.65);
+$nk-input-focus-color: $nk-input-color;
+$nk-input-focus-width: $nk-input-btn-focus-width;
+$nk-input-focus-box-shadow: $nk-input-btn-focus-box-shadow;
+
+$nk-input-placeholder-color: $base-text;
+$nk-input-plaintext-color: $base-text;
+
+$nk-input-height-border: $nk-input-border-width * 2;
+
+$nk-input-height-inner: $nk-input-line-height * 1em, $nk-input-padding-y * 2;
+$nk-input-height-inner-half: $nk-input-line-height * 0.5em, $nk-input-padding-y;
+$nk-input-height-inner-quarter: $nk-input-line-height * 0.25em, $nk-input-padding-y * 0.5;
+
+$nk-input-height: $size-rg;
+$nk-input-height-sm: $size-sm;
+$nk-input-height-lg: $size-lg;
+
+$nk-input-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+$nk-form-color-width: 3rem;
+
+$nk-input-bg-light: $normal-layout-gray-light;
+
+$nk-textarea-height: 210px;
+
+/////////   CARD    //////////
+//////////////////////////////////////
+$nk-card-spacer-y: 1.875rem;
+$nk-card-spacer-x: 1.875rem;
+$nk-card-title-spacer-y: $nk-spacer * 0.5;
+$nk-card-title-line-height: 1.6;
+$nk-card-title-letter-spacing: 0.015rem;
+$nk-card-border-width: $nk-border-width;
+$nk-card-border-color: $border-light;
+$nk-card-border-radius: $nk-border-radius;
+$nk-card-box-shadow: null;
+$nk-card-inner-border-radius: calc(#{$nk-card-border-radius} - 1px);
+$nk-card-cap-padding-y: $nk-card-spacer-y * 0.5;
+$nk-card-cap-padding-x: $nk-card-spacer-x;
+$nk-card-cap-bg: rgba($black, 0.03);
+$nk-card-cap-color: null;
+$nk-card-height: null;
+$nk-card-color: null;
+$nk-card-bg: $white;
+$nk-card-img-overlay-padding: $nk-spacer;
+$nk-card-group-margin: $nk-grid-gutter-width * 0.5;
+$nk-card-title-hover-color: $accent-color;
+
+$nk-card-title-hover-color-on-theme: $white;
+$nk-card-btn-link-color-on-theme: $white;
+
+/////////   BADGE    //////////
+//////////////////////////////////////
+$nk-badge-bg-color: none;
+$nk-badge-font-size: 0.875rem;
+$nk-badge-line-height: 1.14;
+$nk-badge-font-weight: $nk-font-weight-semibold;
+$nk-badge-color: $white;
+
+$nk-badge-padding-y: 0.25rem;
+$nk-badge-padding-x: 0.75rem;
+
+$nk-badge-padding-y-md: 0.5rem;
+$nk-badge-padding-x-md: 1rem;
+
+$nk-badge-border-radius: 0.5rem;
+$nk-badge-letter-spacing: 0.04em;
+
+/////////   LAYOUTS    //////////
+//////////////////////////////////////
+// Breakpoint
+$points: "sm", "md", "lg", "xl";
+
+// header
+$nk-header-main-position: fixed;
+$header-main-gap: 0.8438rem;
+$header-main-height: 88px;
+$header-main-border: $border-light;
+$nk-header-bg: $white;
+$nk-header-bg-active: $white;
+$nk-header-active-shaddow: 4px 4px 36px 0px rgb(192 192 192 / 16%), -4px -4px 36px 0px rgb(192 192 192 / 12%) !important;
+
+// logo
+$logo-gap: 0.375rem;
+
+$navbar-overlay: rgba($nk-gray-900, 0.4);
+
+// menu
+$nk-menu-class: "nk-nav";
+
+// menu link
+$nk-menu-link-color: $base-color;
+$nk-menu-link-font-size: 1rem;
+$nk-menu-link-font-weight: 600;
+$nk-menu-link-gap-y: 0.625rem;
+$nk-menu-link-gap-y-lg: 1.5rem;
+$nk-menu-link-gap-x: 1rem;
+
+// menu sub
+$nk-menu-sub-bg: $white;
+$nk-menu-sub-gap-y: 0.938rem;
+$nk-menu-sub-gap-x: 0.75rem;
+
+$nk-menu-sub-link-gap-y: 0.625rem;
+$nk-menu-sub-link-gap-x: 1.875rem;
+
+$nk-menu-sub-box-shadow: 0 2px 13px 0px rgba($nk-gray-700, 0.15);
+$nk-menu-sub-border-radius: 1rem;
+
+$nk-menu-min-width: 232px;
+$nk-menu-min-width-lg: 340px;
+
+$nk-menu-sub-sub-gap-x: 1.5rem;
+$nk-menu-sub-link-color: $base-color;
+$nk-menu-sub-link-font-size: 0.875rem;
+$nk-menu-sub-link-font-weight: 600;
+$nk-menu-sub-link-line-height: 1.6;
+$nk-menu-sub-link-hover-color: $accent-color;
+$nk-menu-sub-link-hover-bg: rgba($primary, 0.1);
+
+// menu theme
+$nk-menu-sub-bg-on-theme: #1c2b43;
+$nk-menu-sub-box-shadow-on-theme: -4px -4px 36px rgba(19, 20, 44, 0.12), 4px 4px 36px rgba(19, 20, 44, 0.16);
+
+// menu mega
+$nk-menu-mega-item-gap-x: 0.625rem;
+$nk-menu-mega-link-gap: 0.625rem;
+$nk-menu-mega-link-border-radius: 0.5rem;
+
+// navbar
+$nk-navbar-width: 330px;
+$nk-navbar-height: 100vh;
+$nk-navbar-bg: $white;
+$nk-navbar-transform: translateX(-100%);
+$nk-navbar-box-shadow: 0px 0px 10px rgba($base-color, 0.1);
+$nk-navbar-z-index: 1025;
+
+// navbar btn
+$nk-navbar-btn-gap: 1rem;
+
+// banner
+$banner-gap-y: 120px;
+$banner-card-bg: linear-gradient(180deg, #0a1425 0%, #0a1425 0.01%, #1c2d4f 100%);
+$banner-card-padding-y: 140px;
+$banner-card-padding-x: 100px;
+
+$banner-card-padding-y-sm: 40px;
+$banner-card-padding-x-sm: 40px;
+
+$banner-card-border-radius: 1rem;
+$banner-card-color: $white;
+
+// theme color of menubar
+$menu-link-color-on-theme: $white;
+$menu-link-hover-color-on-theme: $white;
+
+/////////   OVERLINE TITLE    //////////
+//////////////////////////////////////
+$overline-title-color: $accent-color;
+$overline-title-font-weight: 600;
+$overline-title-sep-bg: $nk-gray-50;
+
+/////////  SCHEDULE    //////////
+//////////////////////////////////////
+$nk-schedule-class: "nk-schedule";
+$nk-schedule-item-gap-y: 0.25rem;
+$nk-schedule-item-inner-gap: 1.25rem;
+$nk-schedule-content-gap: 1rem;
+$nk-schedule-symbol-before-bg: $accent-color;
+$nk-schedule-symbol-before-opacity: 0.4;
+
+// schedule s1
+$nk-schedule-s1-border: 1px solid $border-light;
+$nk-schedule-s1-content-gap: 3rem;
+$nk-schedule-s1-item-gap-y: 1.875rem;
+$nk-schedule-s1-symbol-negative-gap: 2rem;
+
+// schedule s2
+$nk-schedule-s2-item-gap-y: 3rem;
+$nk-schedule-s2-content-gap: 2rem;
+$nk-schedule-s2-item-after-border: 2px dashed $accent-color;
+$nk-schedule-s2-item-after-opaticy: 0.3;
+$nk-schedule-s2-item-after-top: 76px;
+$nk-schedule-s2-item-after-left: 22px;
+$nk-schedule-s2-symbol-margin-y: 34px;
+
+/////////  NAV PILLS    //////////
+//////////////////////////////////////
+$nav-pill-class: "nav-pills";
+$nav-pill-bg: $nk-gray-50;
+$nav-pill-border: 1px solid $border-light;
+$nav-pill-padding: 0.625rem;
+$nav-pill-border-radius: 2rem;
+
+/////////  NAV TABS    //////////
+//////////////////////////////////////
+$nav-tab-class: "nav-tabs";
+$nav-tab-border-color: $border-light;
+$nav-tab-link-y: 1.5rem;
+$nav-tab-link-y-sm: 1rem;
+$nav-tab-link-x: 0;
+
+$nav-tab-link-after-bg: $base-color;
+$nav-tab-link-after-height: 2px;
+$nav-tab-link-after-transform: scale(0.8);
+$nav-tab-link-after-active-transform: scale(1);
+
+/////////  NAV    //////////
+//////////////////////////////////////
+$nk-nav-link-padding-y: 0.5rem;
+$nk-nav-link-padding-x: 1rem;
+$nk-nav-link-font-size: null;
+$nk-nav-link-font-weight: $nk-font-weight-medium;
+$nk-nav-link-color: $base-color;
+$nk-nav-link-hover-color: $accent-color;
+$nk-nav-link-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+$nk-nav-link-disabled-color: $nk-gray-600;
+
+$nk-nav-tabs-border-color: $nk-gray-300;
+$nk-nav-tabs-border-width: 1px;
+$nk-nav-tabs-border-radius: $nk-border-radius;
+$nk-nav-tabs-link-hover-border-color: $nk-gray-200 $nk-gray-200 $nk-nav-tabs-border-color;
+$nk-nav-tabs-link-active-color: $nk-gray-700;
+$nk-nav-tabs-link-active-bg: $nk-body-bg;
+$nk-nav-tabs-link-active-border-color: $nk-gray-300 $nk-gray-300 $nk-nav-tabs-link-active-bg;
+
+$nk-nav-pills-border-radius: $nk-border-radius;
+$nk-nav-pills-link-active-color: $white;
+$nk-nav-pills-link-active-bg: $accent-color;
+
+/////////  DROPDOWN    //////////
+//////////////////////////////////////
+$nk-dropdown-class: "dropdown";
+$nk-dropdown-min-width: 10rem;
+$nk-dropdown-padding-x: 0;
+$nk-dropdown-padding-y: 0.5rem;
+$nk-dropdown-spacer: 0.125rem;
+$nk-dropdown-font-size: 0.875rem;
+$nk-dropdown-color: $nk-body-color;
+$nk-dropdown-bg: $white;
+$nk-dropdown-border-color: $border-light;
+$nk-dropdown-border-radius: $nk-border-radius;
+$nk-dropdown-border-width: 1px;
+$nk-dropdown-inner-border-radius: subtract($nk-dropdown-border-radius, $nk-dropdown-border-width);
+$nk-dropdown-divider-bg: $nk-dropdown-border-color;
+$nk-dropdown-divider-margin-y: 0.5rem;
+$nk-dropdown-box-shadow: 0 2px 12px -1px rgba(#43476b, 0.2);
+
+$nk-dropdown-link-color: $base-text;
+$nk-dropdown-link-hover-color: $accent-color;
+$nk-dropdown-link-hover-bg: rgba($accent-color, 0.06);
+
+$nk-dropdown-link-active-color: $accent-color;
+$nk-dropdown-link-active-bg: rgba($accent-color, 0.06);
+
+$nk-dropdown-link-disabled-color: $nk-gray-500;
+
+$nk-dropdown-item-padding-y: 0.375rem;
+$nk-dropdown-item-padding-x: 1rem;
+
+$nk-dropdown-header-color: $base-color;
+$nk-dropdown-header-font-weight: $nk-font-weight-medium;
+$nk-dropdown-header-padding-x: $nk-dropdown-item-padding-x;
+$nk-dropdown-header-padding-y: 0.25rem;
+$nk-dropdown-header-padding: $nk-dropdown-padding-y $nk-dropdown-item-padding-x;
+
+/////////   FORM CHECK    //////////
+//////////////////////////////////////
+$nk-form-check-input-width: 1.25rem;
+$nk-form-check-min-height: $nk-font-size-base * $nk-line-height-base;
+$nk-form-check-padding-start: $nk-form-check-input-width;
+$nk-form-check-margin-bottom: 0.125rem;
+$nk-form-check-label-color: null;
+$nk-form-check-label-cursor: null;
+$nk-form-check-transition: null;
+
+$nk-form-check-label-font-size: 1rem;
+$nk-form-check-label-line-height: 1.4rem;
+
+$nk-form-check-label-gap: 0.5rem;
+
+$nk-form-check-label-font-size-lg: 1.125rem;
+$nk-form-check-label-line-height-lg: 2rem;
+
+$nk-form-check-label-gap-lg: 0.875rem;
+$nk-form-check-input-size-lg: 1.5rem;
+
+$nk-form-check-label-font-size-xl: 1.25rem;
+$nk-form-check-label-line-height-xl: 2.25rem;
+
+$nk-form-check-label-gap-xl: 1rem;
+$nk-form-check-input-size-xl: 2.25rem;
+
+$nk-form-check-input-active-filter: brightness(90%);
+
+$nk-form-check-input-bg: $nk-input-bg;
+$nk-form-check-input-border: 2px solid $nk-input-border-color;
+$nk-form-check-input-border-radius: 0.25em;
+$nk-form-check-radio-border-radius: 50%;
+$nk-form-check-input-focus-border: $nk-input-focus-border-color;
+$nk-form-check-input-focus-box-shadow: $nk-input-btn-focus-box-shadow;
+
+$nk-form-check-input-checked-color: $white;
+$nk-form-check-input-checked-bg-color: $accent-color;
+$nk-form-check-input-checked-border-color: $nk-form-check-input-checked-bg-color;
+$nk-form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$nk-form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>");
+$nk-form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$nk-form-check-input-checked-color}'/></svg>");
+
+$nk-form-check-input-indeterminate-color: $accent-color;
+$nk-form-check-input-indeterminate-bg-color: $accent-color;
+$nk-form-check-input-indeterminate-border-color: $nk-form-check-input-indeterminate-bg-color;
+$nk-form-check-input-indeterminate-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$nk-form-check-input-indeterminate-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/></svg>");
+
+$nk-form-check-input-disabled-opacity: 0.5;
+$nk-form-check-label-disabled-opacity: $nk-form-check-input-disabled-opacity;
+$nk-form-check-btn-check-disabled-opacity: $nk-gray-500;
+
+$nk-form-check-inline-margin-end: 1rem;
+
+// form switch
+$nk-form-switch-color: $nk-input-border-color;
+
+$nk-form-switch-width: 2rem;
+$nk-form-switch-width-lg: 3rem;
+$nk-form-switch-width-xl: 4.375rem;
+
+$nk-form-switch-padding-start: $nk-form-switch-width + 0.5rem;
+$nk-form-switch-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$nk-form-switch-color}'/></svg>");
+$nk-form-switch-border-radius: $nk-form-switch-width;
+$nk-form-switch-transition: background-position 0.15s ease-in-out;
+
+$nk-form-switch-focus-color: $nk-input-focus-border-color;
+$nk-form-switch-focus-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$nk-form-switch-focus-color}'/></svg>");
+
+$nk-form-switch-checked-color: $white;
+$nk-form-switch-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$nk-form-switch-checked-color}'/></svg>");
+$nk-form-switch-checked-bg-position: right center;
+
+/////////  BTN ZOOM    //////////
+//////////////////////////////////////
+$btn-zoom-color: $base-text;
+$btn-zoom-bg: $nk-gray-100;
+$btn-zoom-width: 1.25rem;
+$btn-zoom-height: 1.25rem;
+
+/////////  PRICING    //////////
+//////////////////////////////////////
+$pricing-class: "nk-pricing";
+$pricing-bg: $lighter;
+$pricing-border: 1px solid $border-light;
+$pricing-border-active: 2px solid $accent-color;
+$pricing-gap: 2rem;
+$pricing-border-radius: $nk-border-radius-xl;
+
+$pricing-head-icon-size: 3.875rem;
+$pricing-head-icon-size-active: 4.5rem;
+$pricing-head-icon-color: $accent-color;
+$pricing-head-icon-gap-x: 0.75rem;
+$pricing-head-text-font-size: 1.125rem;
+$pricing-head-text-font-size-active: 24px;
+$pricing-head-text-font-size-2: 1rem;
+
+$pricing-list-item-active-color: $base-color;
+$pricing-list-item-active-icon-color: $accent-color;
+
+$pricing-toggle-text-color: $base-color;
+$pricing-toggle-text-font-weight: $nk-font-weight-bold;
+$pricing-toggle-text-font-size: 1.25rem;
+
+// pricing wrap s1
+$pricing-wrap-s1-bg: $normal-layout-gray-light;
+$pricing-wrap-s1-border: 1px solid $nk-gray-100;
+$pricing-wrap-s1-border-radius: 0.5rem;
+$pricing-wrap-s1-padding: 3.75rem;
+
+// pricing group
+$pricing-group-bg: $white;
+$pricing-group-border-radius: 0.75rem;
+
+// pricing s1
+$pricing-s1-bg: transparent;
+$pricing-s1-border: 0;
+$pricing-s1-border-radius: 0;
+
+$pricing-s1-icon-width: 18px;
+$pricing-s1-icon-height: 18px;
+$pricing-s1-icon-border-radius: 50%;
+$pricing-s1-icon-bg: mix($accent-color, $white, 12%);
+$pricing-s1-icon-color: $accent-color;
+$pricing-s1-icon-font-size: 0.813rem;
+
+// prcing toggle
+$pricing-toggle-s1-bg: $base-color;
+$pricing-toggle-s1-border-radius: 30px;
+$pricing-toggle-s1-padding: 0.5rem;
+
+$pricing-toggle-s1-label-width: 90px;
+$pricing-toggle-s1-label-color: $white;
+$pricing-toggle-s1-label-font-size: 1rem;
+$pricing-toggle-s1-label-line-height: 40px;
+
+$pricing-toggle-s1-switch-highlight-translate: translateX($pricing-toggle-s1-label-width);
+$pricing-toggle-s1-switch-highlight-border-radius: 30px;
+$pricing-toggle-s1-switch-highlight-width: $pricing-toggle-s1-label-width;
+$pricing-toggle-s1-switch-highlight-height: $pricing-toggle-s1-label-line-height;
+$pricing-toggle-s1-switch-highlight-top: $pricing-toggle-s1-padding;
+$pricing-toggle-s1-switch-highlight-left: $pricing-toggle-s1-padding;
+$pricing-toggle-s1-switch-highlight-bg: $accent-color;
+
+// prcing toggle s2
+$pricing-toggle-s2-bg: $white;
+$pricing-toggle-s2-border: 1px solid $border-light;
+$pricing-toggle-s2-label-color: $base-color;
+$pricing-toggle-s2-label-active-color: $white;
+
+// pricing s2
+$pricing-s2-icon-color: $accent-color;
+$pricing-s2-icon-active-color: $accent-color;
+
+$pricing-s2-bg: $white;
+$pricing-s2-border-radius: $nk-border-radius;
+
+$pricing-s2-active-border-color: $accent-color;
+$pricing-s2-active-btn-bg: $accent-color;
+$pricing-s2-active-btn-color: $white;
+
+$pricing-s2-text-font-size: 1rem;
+$pricing-s2-sub-font-size: 2rem;
+
+// pricing s3
+$pricing-s3-bg: $white;
+$pricing-s3-border-radius: 1rem;
+
+// pricing active
+$pricing-active-bg: $accent-color;
+$pricing-active-color: $white;
+$pricing-active-border-color: $accent-color;
+
+$pricing-active-btn-bg: $white;
+$pricing-active-btn-color: $base-color;
+$pricing-active-btn-border-color: $pricing-active-btn-bg;
+
+$pricing-active-icon-bg: rgba($base-color, 0.4);
+
+// pricing active badge wrap
+$pricing-active-badge-wrap-bg: $pricing-active-bg;
+$pricing-active-badge-wrap-border-radius: $pricing-group-border-radius;
+$pricing-active-badge-wrap-padding: 1.25rem;
+
+/////////  COURSE    //////////
+//////////////////////////////////////
+$nk-course-overview-class: "nk-course-overview";
+$nk-course-overview-icon-color: $accent-color;
+$nk-course-overview-icon-font-size: 1.125rem;
+$nk-course-overview-title-color: $base-color;
+$nk-course-overview-title-font-weight: 700;
+$nk-course-overview-content-gap-x: 0.5rem;
+
+/////////  ACCORDION    //////////
+//////////////////////////////////////
+$nk-accordion-padding-y: 1rem;
+$nk-accordion-padding-x: 1.25rem;
+$nk-accordion-color: $nk-body-color; // Sass variable because of $nk-accordion-button-icon
+$nk-accordion-bg: $nk-body-bg;
+$nk-accordion-border-width: 1px;
+$nk-accordion-border-color: $border-color;
+$nk-accordion-border-radius: $nk-border-radius;
+$nk-accordion-inner-border-radius: subtract($nk-accordion-border-radius, $nk-accordion-border-width);
+
+$nk-accordion-body-padding-y: $nk-accordion-padding-y;
+$nk-accordion-body-padding-x: $nk-accordion-padding-x;
+
+$nk-accordion-button-padding-y: $nk-accordion-padding-y;
+$nk-accordion-button-padding-x: $nk-accordion-padding-x;
+$nk-accordion-button-color: $nk-accordion-color;
+$nk-accordion-button-bg: $white;
+$nk-accordion-transition: 0.15s ease;
+$nk-accordion-button-active-bg: mix($accent-color, $white, 12%);
+$nk-accordion-button-active-color: $accent-color;
+
+$nk-accordion-button-focus-border-color: $nk-input-focus-border-color;
+$nk-accordion-button-focus-box-shadow: none;
+
+$nk-accordion-icon-width: 1.25rem;
+$nk-accordion-icon-color: $nk-accordion-button-color;
+$nk-accordion-icon-active-color: $nk-accordion-button-active-color;
+$nk-accordion-icon-transition: transform 0.2s ease-in-out;
+$nk-accordion-icon-transform: rotate(-180deg);
+
+$nk-accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$nk-accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+$nk-accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$nk-accordion-icon-active-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+
+// accordion s1
+$accordion-class: "accordion";
+
+$accordion-s1-item-bg: $normal-layout-gray-light;
+$accordion-s1-item-border-color: $nk-gray-100;
+$accordion-s1-item-border-radius: 0.5rem;
+$accordion-s1-item-padding: 2rem;
+
+$accordion-s1-icon-color: $accent-color;
+$accordion-s1-icon-font-size: 1.25rem;
+
+$accordion-s1-button-padding: 0.25rem;
+
+$accordion-s1-body-padding: 0.5rem 0.25rem 0 0.25rem;
+$accordion-s1-body-color: $base-text;
+
+// accordion s2
+$accordion-s2-border: 1px solid $border-light;
+$accordion-s2-border-radius: 1rem;
+$accordion-s2-padding-x: 1.875rem;
+$accordion-s2-item-border-color: $border-light;
+$accordion-s2-item-padding-y: $accordion-s2-padding-x;
+$accordion-s2-body-padding: 0.75rem 1.875rem 0 0;
+$accordion-s2-body-color: $base-text;
+
+// accordion s3
+$accordion-s3-border: 0px solid $border-color;
+$accordion-s3-border-radius: 0.5rem;
+$accordion-s3-padding-x: 1.875rem;
+$accordion-s3-item-border-color: $border-color;
+$accordion-s3-item-padding-y: $accordion-s3-padding-x;
+$accordion-s3-body-padding: 1.875rem;
+$accordion-s3-body-color: $base-text;
+
+// contact
+$contact-box-bg: $normal-layout-gray-light;
+$contact-box-border: 1px solid $nk-gray-100;
+$contact-box-border-radius: 0.5rem;
+$contact-box-content-padding: 1.875rem;
+
+/////////  FORM CARD    //////////
+//////////////////////////////////////
+$form-card-title-color: $base-color;
+$form-card-text-color: $base-text;
+
+$input-label-color: $base-color;
+$input-label-font-size: 1rem;
+$input-label-gap-y: 0.75rem;
+$input-label-font-weight: 600;
+
+/////////  TIMELINE GROUP   //////////
+//////////////////////////////////////
+$timeline-group-item-width: 25%;
+
+$timeline-group-item-after-bg: $nk-gray-100;
+$timeline-group-item-after-top: 2rem;
+$timeline-group-item-after-height: 1px;
+
+/////////  FORM CONTROL ICON   //////////
+//////////////////////////////////////
+$input-control-icon-gap-x: 1rem;
+$input-control-icon-input-control-x: 2.5rem;
+$input-control-icon-color: $base-text;
+
+// --------- CARD -------- \\
+$nk-card-body-padding: 30px;
+$nk-card-border-radius: $nk-border-radius-lg;
+$nk-card-border: $nk-border-width solid $border-color;
+
+/////////  FEATURE CARD   //////////
+//////////////////////////////////////
+$feature-card-bg: linear-gradient(180deg, #feebed -0.03%, #ffc7cb 99.93%);
+$feature-card-padding-y: 3.75rem;
+$feature-card-padding-x: 3.75rem;
+$feature-card-border-radius: 0.5rem;
+
+/////////  FEATURE CARD TEXT   //////////
+//////////////////////////////////////
+$feature-card-text-gap-x: 3.125rem;
+$feature-card-text-line-gap-x: 1.5rem;
+
+$feature-card-text-title-line-height: 1.5;
+
+$feature-card-text-line-after-width: 3px;
+$feature-card-text-line-after-border-radius: 0.25rem;
+$feature-card-text-line-1-bg: $accent-color;
+$feature-card-text-line-2-bg: $yellow;
+$feature-card-text-line-3-bg: $red;
+
+/////////  LIST DOT   //////////
+//////////////////////////////////////
+$list-dot-item-gap-y: 1.25rem;
+$list-dot-item-gap-x: 1.25rem;
+
+$list-dot-item-after-width: 6px;
+$list-dot-item-after-height: 6px;
+$list-dot-item-after-top: 12px;
+$list-dot-item-after-bg: $nk-gray-500;
+$list-dot-item-after-border-radius: 50%;
+
+// list dot sm
+$list-dot-sm-item-gap-x: 0.75rem;
+$list-dot-sm-item-font-size: 0.875rem;
+$list-dot-sm-item-after-top: 20px;
+$list-dot-sm-item-after-width: 3px;
+$list-dot-sm-item-after-height: 3px;
+
+/////////  TABLES  //////////
+//////////////////////////////////////
+$nk-table-cell-padding-y: 0.5rem;
+$nk-table-cell-padding-x: 0.5rem;
+$nk-table-cell-padding-y-sm: 0.25rem;
+$nk-table-cell-padding-x-sm: 0.25rem;
+
+$nk-table-cell-vertical-align: top;
+
+$nk-table-color: $base-color;
+$nk-table-bg: transparent;
+$nk-table-accent-bg: transparent;
+
+$nk-table-th-font-weight: null;
+
+$nk-table-striped-color: $nk-table-color;
+$nk-table-striped-bg-factor: 0.05;
+$nk-table-striped-bg: rgba($black, $nk-table-striped-bg-factor);
+
+$nk-table-active-color: $nk-table-color;
+$nk-table-active-bg-factor: 0.1;
+$nk-table-active-bg: rgba($black, $nk-table-active-bg-factor);
+
+$nk-table-hover-color: $nk-table-color;
+$nk-table-hover-bg-factor: 0.075;
+$nk-table-hover-bg: rgba($black, $nk-table-hover-bg-factor);
+
+$nk-table-border-factor: 0.1;
+$nk-table-border-width: 1px;
+$nk-table-border-color: $border-light;
+
+$nk-table-striped-order: odd;
+$nk-table-striped-columns-order: even;
+
+$nk-table-group-separator-color: currentcolor;
+
+$nk-table-caption-color: $base-text;
+
+$nk-table-bg-scale: -80%;
+
+/////////  COMPARE PRICING  //////////
+//////////////////////////////////////
+$nk-compare-bg: $white;
+$nk-compare-padding-x: 2.5rem;
+$nk-compare-border: 1px solid $border-light;
+$nk-compare-border-radius: $nk-border-radius-lg;
+
+$nk-compare-col-padding-y: 1.5rem;
+$nk-compare-col-width-lg: 600px;
+$nk-compare-col-active-bg: $primary-100;
+
+$nk-compare-col-lead-font-size: 18px;
+$nk-compare-col-lead-color: $base-text;
+
+$nk-compare-head-col-padding-y: 3rem;
+
+/////////  TAGS  //////////
+//////////////////////////////////////
+$tag-item-bg: $gray-light;
+$tag-item-padding-y: 0.5rem;
+$tag-item-padding-x: 1rem;
+$tag-item-border: 1px solid $border-light;
+$tag-item-border-radius: 50px;
+$tag-item-font-size: 0.875rem;
+$tag-item-font-weight: 600;
+$tag-item-color: $base-color;
+$tag-item-text-transform: uppercase;
+$tag-item-hover-bg: $accent-color;
+$tag-item-hover-color: $white;
+$tag-item-hover-border-color: $tag-item-hover-bg;
+$tag-item-letter-spacing: 0.04em;
+
+/////////  PAGINATION S1  //////////
+//////////////////////////////////////
+$pagination-s1-page-link-min-width: 2.5rem;
+$pagination-s1-page-link-min-height: 2.5rem;
+$pagination-s1-page-link-padding-y: 0.375rem;
+$pagination-s1-page-link-padding-x: 0.938rem;
+$pagination-s1-page-link-color: $base-color;
+$pagination-s1-page-link-border-color: $border-light;
+$pagination-s1-page-link-border-radius: 0.5rem;
+
+$pagination-s1-page-link-hover-bg: $border-light;
+$pagination-s1-page-link-hover-color: $pagination-s1-page-link-hover-bg;
+
+$pagination-s1-page-link-active-bg: $accent-color;
+$pagination-s1-page-link-active-border-color: $pagination-s1-page-link-active-bg;
+$pagination-s1-page-link-active-color: $white;
+
+$pagination-s1-page-item-gap-x: 0.5rem;
+
+$pagination-s1-page-link-icon-font-size: 1.125rem;
+
+/////////  BREADCRUMB  //////////
+//////////////////////////////////////
+$nk-breadcrumb-font-size: 0.875rem;
+$nk-breadcrumb-padding-y: 0;
+$nk-breadcrumb-padding-x: 0;
+$nk-breadcrumb-item-padding-x: 0.5rem;
+$nk-breadcrumb-margin-bottom: 1rem;
+$nk-breadcrumb-bg: null;
+$nk-breadcrumb-divider-color: $base-color;
+$nk-breadcrumb-active-color: $base-color;
+$nk-breadcrumb-divider: quote("/");
+$nk-breadcrumb-divider-flipped: $nk-breadcrumb-divider;
+$nk-breadcrumb-border-radius: null;
+
+/////////  404  //////////
+//////////////////////////////////////
+$error-number-font-size: 256px;
+$error-number-font-size-sm: 156px;
+$error-number-color: $accent-color;
+$error-number-font-weight: 700;
+
+/////////  VIDEO BTN S1  //////////
+//////////////////////////////////////
+$video-btn-s1-border: 2px dashed $red;
+$video-btn-s1-border-radius: 50%;
+$video-btn-s1-padding: 7px;
+
+/////////  SEP  //////////
+//////////////////////////////////////
+$sep-bg: $nk-gray-100;
+$sep-height: 1px;
+$sep-overlap-bg: $white;
+
+$utilities: (
+  "font-weight": (
+    property: font-weight,
+    class: fw,
+    values: (
+      normal: $nk-font-weight-normal,
+      medium: $nk-font-weight-medium,
+      semibold: $nk-font-weight-semibold,
+      bold: $nk-font-weight-bold,
+    ),
+  ),
+);
+
+// --------- SECTION BLOCKS -------- \\
+
+$nk-sc-subtitle-lh: 1.14;
+$nk-sc-subtitle-mb: 12px;
+$nk-sc-subtitle-bg: none;
+$nk-sc-subtitle-radius: none;
+$nk-sc-subtitle-padding: 0px;
+$nk-sc-subtitle-fs: 0.875rem;
+$nk-sc-subtitle-tt: uppercase;
+$nk-sc-subtitle-color: $primary;
+$nk-sc-subtitle-fw: $nk-font-weight-semibold;
+
+$nk-sc-title-lh: 1.5;
+$nk-sc-title-mb: 12px;
+$nk-sc-title-fs: 2.5rem;
+$nk-sc-title-tt: capitalize;
+$nk-sc-title-color: $darker;
+$nk-sc-title-fw: $nk-font-weight-bold;
+
+$nk-sc-text-mb: 0;
+$nk-sc-text-lh: 1.6;
+$nk-sc-text-fs: 1.25rem;
+$nk-sc-text-color: $nk-gray-800;
+$nk-sc-text-fw: $nk-font-weight-base;
+
+// --------- Button Group -------- \\
+$nk-button-group-space: 1rem;
+
+$nk-btn-link-color: $darker;
+$nk-btn-link-font-size: 1rem;
+$nk-btn-link-font-weight: $nk-font-weight-semibold;
+
+// Newsletter Fields
+$nk-newsletter-form-control-x-padding: 1rem;
+$nk-newsletter-form-control-x-padding-s1: 1rem;
+$nk-newsletter-form-control-x-padding-s2: 1rem;
+$nk-newsletter-form-control-x-padding-s3: 1rem;
+
+$nk-newsletter-form-control-y-padding: 1rem;
+$nk-newsletter-form-control-y-padding-s1: 1rem;
+$nk-newsletter-form-control-y-padding-s2: 1rem;
+$nk-newsletter-form-control-y-padding-s3: 1rem;
+
+$nk-newsletter-form-control-input-text-color: $text-base;
+$nk-newsletter-form-control-input-text-color-s1: $text-base;
+$nk-newsletter-form-control-input-text-color-s2: $text-base;
+$nk-newsletter-form-control-input-text-color-s3: $text-base;
+
+$nk-newsletter-form-control-input-bg-color: transparent;
+$nk-newsletter-form-control-input-bg-color-s1: $white;
+$nk-newsletter-form-control-input-bg-color-s2: $white;
+$nk-newsletter-form-control-input-bg-color-s3: $white;
+
+$nk-newsletter-form-control-input-border-radius: $nk-border-radius;
+$nk-newsletter-form-control-input-border-radius-s1: 1px;
+$nk-newsletter-form-control-input-border-radius-s2: 1px;
+$nk-newsletter-form-control-input-border-radius-s3: 50px;
+
+$nk-newsletter-form-control-input-border-size: 1px;
+$nk-newsletter-form-control-input-border-size-s1: 1px;
+$nk-newsletter-form-control-input-border-size-s2: 1px;
+$nk-newsletter-form-control-input-border-size-s3: 0px;
+
+$nk-newsletter-form-control-input-border-color: $border-color;
+$nk-newsletter-form-control-input-border-color-s1: $border-color;
+$nk-newsletter-form-control-input-border-color-s2: $border-color;
+$nk-newsletter-form-control-input-border-color-s3: $border-color;
+
+// timeline dots
+$nk-timeline-dots-padding-left: 1rem;
+
+$nk-timeline-dots-border-width: 1px;
+$nk-timeline-dots-border-color: $nk-hr-border-color;
+
+$nk-timeline-dots-circle-size: 1rem;
+$nk-timeline-dots-circle-inner-size: calc($nk-timeline-dots-circle-size / 2);
+
+$nk-timeline-dots-circle-bg: $white;
+$nk-timeline-dots-circle-inner-bg: $primary;
+$nk-timeline-dots-circle-last-inner-bg: $red;
+
+$nk-timeline-dots-circle-shaddow: 0px 0px 10px 0px #0000000f;
+
+// Layouts Section
+$nk-footer-bg-color: $white;
+
+$nk-footer-info-title-font-size: 20px;
+$nk-footer-info-title-line-height: 1.6;
+$nk-footer-info-title-color: $darker;
+$nk-footer-info-title-font-weight: 700;
+$nk-footer-info-title-transform: capitalize;
+$nk-footer-info-title-bottom-space: 24px;
+
+$nk-footer-info-text-size: 1rem;
+$nk-footer-info-text-weight: 400;
+$nk-footer-info-text-line-height: 1.5;
+$nk-footer-info-text-color: $nk-gray-800;
+$nk-footer-info-text-transform: capitalize;
+
+$nk-footer-menu-text-color: $darker;
+$nk-footer-menu-text-font-weight: 600;
+$nk-footer-menu-text-font-size: 14px;
+$nk-footer-menu-text-line-height: 1.14;
+$nk-footer-menu-text-transform: uppercase;
+
+$nk-footer-text-size: 1rem;
+$nk-footer-text-font-weight: 500;
+$nk-footer-text-color: $darker;
+$nk-footer-text-line-height: 1.5;
+$nk-footer-text-transform: capitalize;
+
+$nk-footer-content-border: 1px solid $border-color;
+
+$nk-footer-top-content-spacing: 3.75rem;
+$nk-footer-bottom-content-spacing: 1.875rem;
+
+$nk-footer-social-gap: 12px;
+$nk-footer-social-size: 40px;
+$nk-footer-social-raidus: 6px;
+$nk-footer-social-color: $white;
+$nk-footer-social-bg-color: $primary;
+$nk-footer-social-border: 0px solid $border-color;
+
+// Preloader
+$nk-preloader-bg: mix($primary, $white, 20%);
+
+$nk-loader-border-color-one: $primary;
+$nk-loader-border-color-two: mix($primary, $white, 70%);
+$nk-loader-border-color-three: mix($primary, $white, 40%);
+
+// Back To Top
+$nk-bt-bg-color: $primary;
+$nk-bt-icon-color: $white;
+$nk-bt-hover-bg-color: mix($primary, $white, 80%);

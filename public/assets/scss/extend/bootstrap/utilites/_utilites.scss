@@ -1,0 +1,199 @@
+@import "color-bg";
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "height": (
+      property: height,
+      class: h,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto,
+        12: 12px,
+        24: 24px,
+        40px: 40px,
+        60: 60px,
+        88: 88px,
+        120: 120px,
+        140: 140px,
+        185: 185px,
+        200: 200px,
+        216: 216px,
+        240: 240px,
+        260: 260px,
+        280: 280px,
+        300: 300px,
+        400: 400px,
+        500: 500px,
+        560: 560px,
+        580: 580px,
+        600: 600px,
+      ),
+    ),
+    "width": (
+      property: width,
+      class: w,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto,
+        12: 12px,
+        20: 20px,
+        24: 24px,
+        88: 88px,
+      ),
+    ),
+    "font-size": (
+      property: font-size,
+      class: fs,
+      values: (
+        8: 8px,
+        10: 10px,
+        12: 12px,
+        14: 14px,
+        16: 16px,
+        18: 18px,
+        20: 20px,
+        24: 24px,
+        26: 26px,
+        28: 28px,
+        40: 40px,
+        48: 48px,
+        56: 56px,
+        60: 60px,
+        80: 80px,
+      ),
+    ),
+    "shadow": (
+      property: box-shadow,
+      class: shadow,
+      values: (
+        none: none,
+        null: $box-shadow,
+        sm: $box-shadow-sm,
+        lg: $box-shadow-lg,
+        xl: $box-shadow-xl,
+      ),
+    ),
+    "z-index": (
+      property: z-index,
+      class: z,
+      values: (
+        1: 1,
+        2: 2,
+      ),
+    ),
+    "transform": (
+      property: transform,
+      class: transform,
+      values: (
+        none: none,
+      ),
+    ),
+    "padding": (
+      responsive: true,
+      property: padding,
+      class: p,
+      values:
+        map-merge(
+          $spacers,
+          (
+            100: 100px,
+            120: 120px,
+            160: 160px,
+            220: 220px,
+          )
+        ),
+    ),
+    "padding-y": (
+      responsive: true,
+      property: padding-top padding-bottom,
+      class: py,
+      values:
+        map-merge(
+          $spacers,
+          (
+            80: 80px,
+            120: 120px,
+            160: 160px,
+            220: 220px,
+          )
+        ),
+    ),
+    "padding-top": (
+      responsive: true,
+      property: padding-top,
+      class: pt,
+      values:
+        map-merge(
+          $spacers,
+          (
+            40: 40px,
+            100: 100px,
+            115: 115px,
+            120: 120px,
+            160: 160px,
+            180: 180px,
+            220: 220px,
+            320: 320px,
+            360: 360px,
+            400: 400px,
+          )
+        ),
+    ),
+    "padding-bottom": (
+      responsive: true,
+      property: padding-bottom,
+      class: pb,
+      values:
+        map-merge(
+          $spacers,
+          (
+            100: 100px,
+            115: 115px,
+            120: 120px,
+            160: 160px,
+            180: 180px,
+            200: 200px,
+            220: 220px,
+            260: 260px,
+            320: 320px,
+            400: 400px,
+          )
+        ),
+    ),
+
+    "margin-bottom": (
+      responsive: true,
+      property: margin-bottom,
+      class: mb,
+      values:
+        map-merge(
+          $spacers,
+          (
+            40: 40px,
+            80: 80px,
+          )
+        ),
+    ),
+    "gap": (
+      responsive: true,
+      property: gap,
+      class: gap,
+      values:
+        map-merge(
+          $spacers,
+          (
+            120: 120px,
+            180: 180px,
+            200: 200px,
+          )
+        ),
+    ),
+  )
+);

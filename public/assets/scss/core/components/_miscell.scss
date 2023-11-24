@@ -1,0 +1,57 @@
+.nk-miscell { 
+  &-include {
+    ul { 
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+
+      li { 
+        a { 
+          font-weight: 500;
+          font-size: .875rem;
+          line-height: 1.625rem;
+          em { 
+            color: $primary;
+          }
+
+          span { 
+            color: $darker;
+            position: relative;
+            display: inline-block;
+
+            &::after { 
+              left: 0px;
+              content: '';
+              bottom: 0px;
+              width: 100%;
+              height: 1px;
+              position: absolute;
+
+              background-color: $darker;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// responsive  breakpoints 
+@include media-breakpoint-up(lg){ 
+  .nk-miscell { 
+    &-include { 
+      ul { 
+        max-width: 27.5rem;
+        padding-top: 1.875rem;
+
+        li { 
+          a { 
+              font-size: 1.125rem;
+              line-height: 1.75rem;
+          }
+        }
+
+      }
+    }
+  }
+}

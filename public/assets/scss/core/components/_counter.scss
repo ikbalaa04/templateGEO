@@ -1,0 +1,25 @@
+.nk-counter {
+  gap: 12px;
+  width: 80px;
+  display: flex;
+  padding: 2px 8px;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid $border-color;
+
+  button {
+    outline: 0;
+    border: 0;
+    padding: 0;
+    color: $nk-gray-800;
+    background-color: transparent;
+  }
+
+  span {
+    color: $primary;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}

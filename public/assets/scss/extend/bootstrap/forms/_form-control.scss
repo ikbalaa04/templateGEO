@@ -1,0 +1,34 @@
+.form-control {
+    &-wrap {
+        position: relative;
+    }
+    &.has-bg {
+        background-color: $nk-input-bg-light;
+    }
+    &-icon {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding-left: $input-control-icon-gap-x;
+        padding-right: $input-control-icon-gap-x;
+        height: 100%;
+        color: $input-control-icon-color;
+        &.start {
+            + .form-control {
+                padding-left: $input-control-icon-input-control-x;
+            }
+        }
+        &.end {
+            left: auto;
+            right: 16px;
+            + .form-control {
+                padding-right: $input-control-icon-input-control-x;
+            }
+        }
+    }
+}
+textarea.form-control {
+    min-height: $nk-textarea-height;
+}

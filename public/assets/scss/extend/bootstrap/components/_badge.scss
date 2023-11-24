@@ -1,0 +1,33 @@
+.badge {
+    font-size: $nk-badge-font-size;
+    line-height: $nk-badge-line-height;
+    letter-spacing: $nk-badge-letter-spacing;
+    background: $nk-badge-bg-color;
+    &-md {
+        padding: $nk-badge-padding-y-md $nk-badge-padding-x-md;
+    }
+
+    // typography
+    &-text--sm {
+        font-size: 0.75rem;
+        font-weight: 600;
+        line-height: 0.875rem;
+    }
+
+    &-feature {
+        display: flex;
+        width: 60px;
+        height: 60px;
+        overflow: hidden;
+        align-items: center;
+        border-radius: 50%;
+        justify-content: center;
+        background-color: #fff;
+        img {
+            max-width: 45px;
+            max-height: 45px;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+    }
+}

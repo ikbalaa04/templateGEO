@@ -1,0 +1,57 @@
+.nk-auth{
+    &-quote{
+        border-left: 1px solid rgba($white, 0.2);
+        &-inner{
+            padding: 10px 32px;
+        }
+    }
+    &-col{
+        padding: 60px 30px;
+    }
+}
+
+.is-theme{
+    .nk-auth-quote p{
+        font-weight: 300;
+    }
+    .media-text span{
+        color: $white;
+    }
+}
+
+@include media-breakpoint-up(sm){
+    .nk-auth{
+        &-quote{
+            position: relative;
+            &::after{
+                position: absolute;
+                top: 22px;
+                left: 0;
+                content: "";
+                width: 48px;
+                height: 1px;
+                background-color: $white;
+                opacity: 0.2;
+            }
+            &-inner{
+                padding: 10px 32px 10px 70px;
+            }
+        }
+        &-col{
+            padding: 60px;
+        }
+    }
+}
+@include media-breakpoint-up(xl){
+    .nk-auth{
+        &-form-card{
+            width: 580px;
+        }
+        &-col{
+            &-content{
+                width: 660px;
+                flex-grow: inherit;
+            }
+        }
+    }
+}

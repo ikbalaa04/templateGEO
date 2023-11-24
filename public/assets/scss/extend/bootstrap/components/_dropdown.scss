@@ -1,0 +1,8 @@
+.#{$nk-dropdown-class}{
+    &-header{
+        font-weight: $nk-dropdown-header-font-weight;
+    }
+    &-menu{
+        box-shadow: $nk-dropdown-box-shadow;
+    }
+}

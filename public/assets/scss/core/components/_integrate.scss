@@ -1,0 +1,126 @@
+$integrate-class: 'nk-integrate';
+
+.#{$integrate-class}{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -1.5rem;
+
+    &-brand{
+        width: 100px;
+        height: 100px;
+        background-color: $integrate-brand-bg;
+        border-radius: $integrate-brand-border-radius;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            height: 2.25rem;
+        }
+    }
+
+    &-item{
+        padding: 1rem;
+    }
+}
+
+@include media-breakpoint-up(lg){
+    .#{$integrate-class}{
+        &-item{
+            &:nth-child(1){
+                .#{$integrate-class}-brand{
+                    width: 148px;
+                    height: 148px;
+                }
+            }
+            &:nth-child(2){
+                margin-top: 50px;
+                .#{$integrate-class}-brand{
+                    width: 111px;
+                    height: 111px;
+                }
+            }
+            &:nth-child(3){
+                margin-top: 10px;
+                .#{$integrate-class}-brand{
+                    width: 130px;
+                    height: 130px;
+                }
+            }
+            &:nth-child(4){
+                margin-top: 30px;
+                .#{$integrate-class}-brand{
+                    width: 139px;
+                    height: 139px;
+                }
+            }
+            &:nth-child(5){
+                .#{$integrate-class}-brand{
+                    width: 156px;
+                    height: 156px;
+                }
+            }
+            &:nth-child(6){
+                .#{$integrate-class}-brand{
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+            &:nth-child(7){
+                margin-top: 20px;
+                .#{$integrate-class}-brand{
+                    width: 130px;
+                    height: 130px;
+                }
+            }
+            &:nth-child(8){
+                .#{$integrate-class}-brand{
+                    width: 158px;
+                    height: 158px;
+                }
+            }
+            &:nth-child(9){
+                .#{$integrate-class}-brand{
+                    width: 112px;
+                    height: 112px;
+                }
+            }
+            &:nth-child(10){
+                .#{$integrate-class}-brand{
+                    width: 148px;
+                    height: 148px;
+                }
+            }
+            &:nth-child(11){
+                .#{$integrate-class}-brand{
+                    width: 112px;
+                    height: 112px;
+                }
+            }
+        }
+        &-brand{
+            img{
+                height: auto;
+            }
+        }
+    }
+}
+@include media-breakpoint-up(xl){
+    .#{$integrate-class}{
+        margin: -1.5rem -2.5rem;
+        &-item{
+            padding: 1.5rem 2.5rem;
+        }
+    }
+}
+
+
+@include media-breakpoint-down(md) { 
+    .#{$integrate-class} { 
+        &-tools { 
+            .tool { 
+                width: 30%;
+            }
+        }
+    }
+}

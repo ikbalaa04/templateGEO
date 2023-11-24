@@ -1,0 +1,81 @@
+.gap {
+    margin-top: calc(-1 * var(--#{$prefix}gutter-y));
+    margin-right: calc(-0.5 * var(--#{$prefix}gutter-x));
+    margin-left: calc(-0.5 * var(--#{$prefix}gutter-x));
+    &[class*="gy-"],
+    &[class*="gx-"] {
+        margin-left: 0;
+        margin-right: 0;
+        > * {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    > * {
+        padding-right: calc(var(--#{$prefix}gutter-x) * 0.5);
+        padding-left: calc(var(--#{$prefix}gutter-x) * 0.5);
+        margin-top: var(--#{$prefix}gutter-y);
+    }
+}
+
+@each $space, $value in $nk-space {
+    .nk-space-#{$space} {
+        padding: $value;
+    }
+
+    .nk-space-y-#{$space} {
+        padding: $value 0px;
+    }
+
+    .nk-space-y-s-#{$space} {
+        padding-top: $value;
+    }
+
+    .nk-space-y-e-#{$space} {
+        padding-bottom: $value;
+    }
+    .nk-space-x-#{$space} {
+        padding: 0px $value;
+    }
+
+    .nk-space-x-s-#{$space} {
+        padding-left: $value;
+    }
+
+    .nk-space-x-e-#{$space} {
+        padding-right: $value;
+    }
+
+    @each $point in $points {
+        @include media-breakpoint-up($point) {
+            .nk-space-#{$point}-#{$space} {
+                padding: $value !important;
+            }
+
+            .nk-space-#{$point}-y-#{$space} {
+                padding-top: $value !important;
+                padding-bottom: $value !important;
+            }
+
+            .nk-space-#{$point}-y-s-#{$space} {
+                padding-top: $value !important;
+            }
+
+            .nk-space-#{$point}-y-e-#{$space} {
+                padding-bottom: $value !important;
+            }
+            .nk-space-#{$point}-x-#{$space} {
+                padding-left: $value !important;
+                padding-right: $value !important;
+            }
+
+            .nk-space-#{$point}-x-s-#{$space} {
+                padding-left: $value !important;
+            }
+
+            .nk-space-#{$point}-x-e-#{$space} {
+                padding-right: $value !important;
+            }
+        }
+    }
+}

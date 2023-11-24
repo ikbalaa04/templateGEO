@@ -1,0 +1,27 @@
+.label { 
+  font-size: 14px;
+  color: $primary;
+  font-weight: 600;
+  line-height: 16px;
+  padding: 8px 16px;
+  text-align: center;
+  border-radius: 18px;
+  display: inline-block;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px solid $primary;
+  background-color: transparent;
+
+  &-white { 
+    color: $white;
+    border-color: $white;
+  }
+}
+
+@include media-breakpoint-up(md) { 
+  .label { 
+    font-size: 1rem;
+    line-height: 1rem;
+    padding: 8px 24px;
+  }
+} 

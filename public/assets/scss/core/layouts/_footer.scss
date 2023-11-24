@@ -1,0 +1,234 @@
+$footer: "nk-footer";
+
+.#{$footer} {
+  background-color: $nk-footer-bg-color;
+  &-top {
+    .#{$footer} {
+      &-content {
+        border-bottom: $nk-footer-content-border;
+        padding: calc($nk-footer-top-content-spacing / 1.2) 0px;
+
+        @include media-breakpoint-up(md) {
+          padding: $nk-footer-top-content-spacing 0px;
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    .#{$footer} {
+      &-content {
+        padding: calc($nk-footer-bottom-content-spacing / 2) 0px;
+
+        @include media-breakpoint-up(md) {
+          padding: $nk-footer-bottom-content-spacing 0px;
+        }
+      }
+    }
+  }
+
+  &-menu {
+    gap: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    @include media-breakpoint-up(md) {
+      flex-wrap: nowrap;
+      gap: 48px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      justify-content: flex-end;
+    }
+
+    @include media-breakpoint-up(xl) {
+      gap: 90px;
+    }
+
+    li {
+      a {
+        color: $darker;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.14;
+        text-align: right;
+        text-transform: uppercase;
+        transition: all 0.3s linear;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  &-text {
+    color: $nk-footer-text-color;
+    font-size: $nk-footer-text-size;
+    line-height: $nk-footer-text-line-height;
+    font-weight: $nk-footer-text-font-weight;
+    text-transform: $nk-footer-text-transform;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &-copyright-text {
+    color: $nk-footer-text-color;
+    font-size: $nk-footer-text-size;
+    line-height: $nk-footer-text-line-height;
+    font-weight: $nk-footer-text-font-weight;
+    text-transform: $nk-footer-text-transform;
+  }
+
+  &-brand {
+    &-info {
+      .#{$footer} {
+        &-logo {
+          margin-bottom: 16px;
+        }
+      }
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  &-social {
+    display: flex;
+    align-items: center;
+    gap: $nk-footer-social-gap;
+
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s linear;
+        width: $nk-footer-social-size;
+        height: $nk-footer-social-size;
+        color: $nk-footer-social-color;
+        border: $nk-footer-social-border;
+        border-radius: $nk-footer-social-raidus;
+        background-color: $nk-footer-social-bg-color;
+      }
+    }
+  }
+
+  &-info {
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 24px;
+    }
+
+    .title {
+      margin-bottom: 24px;
+      color: $nk-footer-info-title-color;
+      font-size: $nk-footer-info-title-font-size;
+      line-height: $nk-footer-info-title-line-height;
+      font-weight: $nk-footer-info-title-font-weight;
+      text-transform: $nk-footer-info-title-transform;
+
+      @include media-breakpoint-up(sm) {
+        margin-bottom: $nk-footer-info-title-bottom-space;
+      }
+    }
+
+    ul {
+      li {
+        a {
+          transition: all 0.3s linear;
+          color: $nk-footer-info-text-color;
+          font-size: $nk-footer-info-text-size;
+          text-transform: $nk-footer-info-text-transform;
+          line-height: $nk-footer-info-text-line-height;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  &-copyright {
+    gap: 6px;
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-up(sm) {
+      gap: 16px;
+    }
+
+    li {
+      position: relative;
+      &::after {
+        content: "";
+        width: 1px;
+        right: -4px;
+        position: absolute;
+        top: calc(50% + 3px);
+        height: calc(100% - 12px);
+        background-color: $nk-footer-text-color;
+        transform: translateY(-50%);
+
+        @include media-breakpoint-up(sm) {
+          right: -8px;
+        }
+      }
+
+      &:nth-last-child(1) {
+        &::after {
+          display: none;
+        }
+      }
+
+      a {
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.nk-footer {
+  &-landing {
+    &-copyright {
+      text-align: center;
+      background-color: $nk-blue-1800;
+
+      span {
+        color: #fff;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+      }
+    }
+  }
+
+  &-bottom {
+    .nk-list-link {
+      li {
+        position: relative;
+
+        &::after {
+          content: "";
+          width: 1px;
+          top: 50%;
+          right: 0px;
+          height: 80%;
+          position: absolute;
+          background-color: $dark;
+          transform: translateY(-50%);
+        }
+
+        &:nth-last-child(1) {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

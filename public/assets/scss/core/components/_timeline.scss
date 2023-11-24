@@ -1,0 +1,155 @@
+.#{$nk-timeline-class} {
+    &-item {
+        &:not(:last-child) {
+            padding-bottom: $nk-timeline-item-gap;
+        }
+
+        &-inner {
+            display: flex;
+        }
+    }
+
+    &-symbol {
+        width: 2.25rem;
+        flex-shrink: 0;
+        position: relative;
+
+        &::after {
+            top: 10px;
+            z-index: 2;
+            content: "";
+            left: 0.25rem;
+            position: absolute;
+            border-radius: 50%;
+            width: $nk-timeline-symbol;
+            height: $nk-timeline-symbol;
+            background-color: $nk-timeline-symbol-bg;
+            box-shadow: $nk-timeline-symbol-box-shadow;
+        }
+
+        &.color {
+            &-1 {
+                &::after {
+                    background-color: $nk-timeline-symbol-bg-1;
+                    box-shadow: $nk-timeline-symbol-box-shadow-1;
+                }
+            }
+            &-2 {
+                &::after {
+                    background-color: $nk-timeline-symbol-bg-2;
+                    box-shadow: $nk-timeline-symbol-box-shadow-2;
+                }
+            }
+        }
+    }
+
+    &-group {
+        display: flex;
+        flex-wrap: wrap;
+
+        &.has-divider {
+            .#{$nk-timeline-class}-group {
+                &-item {
+                    @include media-breakpoint-up(lg) {
+                        z-index: 1;
+                        position: relative;
+                    }
+
+                    &::after {
+                        @include media-breakpoint-up(lg) {
+                            content: "";
+                            left: 50%;
+                            width: 100%;
+                            z-index: -1;
+                            position: absolute;
+                            top: $timeline-group-item-after-top;
+                            height: $timeline-group-item-after-height;
+                            background-color: $timeline-group-item-after-bg;
+                        }
+                    }
+
+                    &:last-child {
+                        &::after {
+                            @include media-breakpoint-up(lg) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-item {
+            @include media-breakpoint-up(sm) {
+                width: 50%;
+            }
+            @include media-breakpoint-up(lg) {
+                width: $timeline-group-item-width;
+            }
+        }
+    }
+}
+
+.timeline-dots {
+    padding-left: $nk-timeline-dots-padding-left;
+    li {
+        position: relative;
+
+        .circle {
+            top: 12px;
+            z-index: 1;
+            left: -24px;
+            display: flex;
+            overflow: hidden;
+            border-radius: 50%;
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            width: $nk-timeline-dots-circle-size;
+            height: $nk-timeline-dots-circle-size;
+            box-shadow: $nk-timeline-dots-circle-shaddow;
+
+            &::after {
+                content: "";
+                border-radius: 50%;
+                position: absolute;
+                background-color: $primary;
+                width: $nk-timeline-dots-circle-inner-size;
+                height: $nk-timeline-dots-circle-inner-size;
+            }
+        }
+
+        &::after {
+            content: "";
+            top: 0px;
+            left: -16px;
+            height: 100%;
+            position: absolute;
+            width: $nk-timeline-dots-border-width;
+            background-color: $nk-timeline-dots-border-color;
+        }
+
+        &:nth-child(1) {
+            &::after {
+                top: 12px;
+            }
+        }
+
+        &:nth-last-child(1) {
+            &::after {
+                height: calc(100% - 70px);
+                @include media-breakpoint-up(sm) {
+                    height: calc(100% - 34px);
+                }
+            }
+
+            .circle {
+                top: 8px;
+                &::after {
+                    background-color: $red;
+                }
+            }
+        }
+    }
+}

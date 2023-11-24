@@ -1,0 +1,163 @@
+.nk-feature-card{
+    background: $feature-card-bg;
+    border-radius: $feature-card-border-radius;
+    padding-top: $feature-card-padding-y;
+    padding-right: $feature-card-padding-x;
+    padding-left: $feature-card-padding-x;
+    &-text{
+        &.line{
+            &-1,
+            &-2,
+            &-3{
+                position: relative;
+                padding-left: $feature-card-text-line-gap-x;
+                &::after{
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    width: $feature-card-text-line-after-width;
+                    height: 100%;
+                    border-radius: $feature-card-text-line-after-border-radius;
+                }
+            }
+            &-1{
+                &::after{
+                    background-color: $feature-card-text-line-1-bg;
+                }
+            }
+            &-2{
+                &::after{
+                    background-color: $feature-card-text-line-2-bg;
+                }
+            }
+            &-3{
+                &::after{
+                    background-color: $feature-card-text-line-3-bg;
+                }
+            }
+   
+        }
+    }
+}
+.nk-feature{
+    &-overview-img{
+        position: relative;
+        .overlay-bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 12px;
+            width: 88%;
+            height: 80%;
+            z-index: -1;
+            &::after{
+                content: "";
+                position: absolute;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                background-image: url('#{$assetsRoot}shape/k1.png');
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+                opacity: 0.6;
+            }
+            &-2{
+                height: 100%;
+                &::after{
+                    background-image: url('#{$assetsRoot}shape/l1.png');
+                }
+            }
+            &-3{
+                height: 100%;
+                width: 80%;
+                &::after{
+                    opacity: 0.4;
+                }
+            }
+            &-4{
+                width: 100%;
+                height: 100%;
+                &::after{
+                    background-image: url('#{$assetsRoot}shape/m1.png');
+                }
+            }
+            &-5{
+                width: 100%;
+                height: 100%;
+                &::after{
+                    background-image: url('#{$assetsRoot}shape/n1.png');
+                }
+            }
+        }
+
+        .base { 
+            z-index: 1;
+        }
+        .children { 
+            position: absolute;
+
+            &-1 { 
+                right: -24px;
+                bottom: 0px;
+            }
+
+            &-2,
+            &-3 { 
+                right: 0px;
+                bottom: 0;
+            }
+
+            &-4 { 
+                right: 0px;
+                bottom: 0px;
+            }
+
+            &-left-top { 
+                top: 15%;
+                left: 0px;
+            }
+
+            &-center { 
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+
+            &-right-bottom { 
+                right: 0;
+                bottom: 15%;
+            }
+
+        }
+    }
+    
+}
+
+
+@include media-breakpoint-down(xl) { 
+    .children-rs { 
+        width: 50%;
+        height: auto !important;
+    }
+}
+
+@include media-breakpoint-down(lg) { 
+    .nk-feature { 
+        &-mobile-img { 
+            max-width: 65%;
+            margin: 0px auto;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) { 
+    .children { 
+        height: auto !important;
+    }
+}
+
+
