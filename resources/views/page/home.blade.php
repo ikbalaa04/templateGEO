@@ -1,535 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Softnio">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/images/favicon.png">
-    <title>NioLand - Homepage Codebase IDE</title>
-    <link rel="stylesheet" href="assets/css/style-codebase.css?v1.0.0">
-</head>
-
-<body class="nk-body" data-navbar-collapse="xl">
-<div class="preloader">
-    <div class="loader"></div>
-</div>
+@extends('template.main')
+@section('main')
 <div class="nk-app-root home-codebase">
-    <header class="nk-header">
-        <div class="nk-header-main nk-navbar-main">
-            <div class="container">
-                <div class="nk-header-wrap">
-                    <div class="nk-header-logo">
-                        <a href="index.html" class="logo-link">
-                            <div class="logo-wrap">
-                                <img class="logo-img logo-light" src="assets/images/logo/geo_dark.png" srcset="assets/images/logo-s12x.png 2x" alt="brand-logo">
-                                <img class="logo-img logo-dark" src="assets/images/logo/geo_dark.png" srcset="assets/images/logo-s1-dark2x.png 2x" alt="brand-logo">
-                            </div>
-                        </a>
-                    </div>
-                    <nav class="nk-header-menu nk-navbar">
-                        <div>
-                            <ul class="nk-nav">
-                                <li class="nk-nav-item has-sub">
-                                    <a href="#" class="nk-nav-link nk-nav-toggle">
-                                        <span class="nk-nav-text">Homepages</span>
-                                    </a>
-                                    <ul class="nk-nav-sub nk-nav-mega nk-nav-mega-lg nk-nav-mega-lg-home">
-                                        <li class="nk-nav-item">
-                                            <ul class="row mx-auto">
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-analytics.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-primary me-3">
-                                                                <em class="icon ni ni-pie-fill"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="lead-text fs-14 text-capitalize m-0">Analytics SAAS</h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">All in One analytics tool</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-kids-course.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-danger me-3">
-                                                                <em class="icon ni ni-book-fill"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="lead-text fs-14 text-capitalize m-0">Kids Course Startup</h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">Super Courses for Super Kids</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-collaboration-tool.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-info me-3">
-                                                                <em class="icon ni ni-users-fill"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="lead-text fs-14 text-capitalize m-0">Collaboration tool</h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">Secure team management</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-business-expense-tracker.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-warning me-3">
-                                                                <em class="icon ni ni-building-fill"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="lead-text fs-14 text-capitalize m-0">Business Expense Tracker</h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">Track business performance</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-live-chat-app.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-success me-3">
-                                                                <em class="icon ni ni-chat-circle-fill"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="lead-text fs-14 text-capitalize m-0">Live Chat App Software</h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">Connect with customers</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-business-solution.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-primary me-3">
-                                                                <em class="icon ni ni-db-fill"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="lead-text fs-14 text-capitalize m-0">Business Solutions</h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">Empowering Business Growth</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-saas.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-danger me-3">
-                                                                <em class="icon ni ni-bar-chart-fill"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="lead-text fs-14 text-capitalize m-0">Business Expenses</h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">Cost Managment Tool</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-digital-business-saas.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-success me-3">
-                                                                <em class="icon ni ni-cloud-fill"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="lead-text fs-14 text-capitalize m-0">Digital Business SAAS</h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">Streamline Business Operations</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-crypto-profile.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-warning me-3">
-                                                                <em class="icon ni ni-sign-btc-alt"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="lead-text fs-14 text-capitalize m-0"> Crypto Profile </h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">Manage your crypto assets</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-business-management.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-blue-800 me-3">
-                                                                <em class="icon ni ni-package-fill"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="lead-text fs-14 text-capitalize m-0"> Business Management </h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">Smart business tool</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-business-subscription.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-danger me-3">
-                                                                <em class="icon ni ni-coin-alt-fill"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="lead-text fs-14 text-capitalize m-0"> Business Subscription </h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">grow business with subscription</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-data-driven.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-primary me-3">
-                                                                <em class="icon ni ni-growth-fill"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="lead-text fs-14 text-capitalize m-0"> Data-driven Business </h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">business analysis tool</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-language-learning.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-cyan-200 me-3">
-                                                                <em class="icon ni ni-file-text-fill"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="lead-text fs-14 text-capitalize m-0"> Language Learning </h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">grow business with subscription</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-project-management.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-blue-1400 me-3">
-                                                                <em class="icon ni ni-presentation-fill"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="lead-text fs-14 text-capitalize m-0"> Project Management </h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">Easy As Ever Before</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-coaching-service.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-purple me-3">
-                                                                <em class="icon ni ni-puzzle-fill"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="lead-text fs-14 text-capitalize m-0"> Coaching Service </h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">Grow Faster With A Coach</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-project-manage.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-green-400 me-3">
-                                                                <em class="icon ni ni-pie-2-fill"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="lead-text fs-14 text-capitalize m-0"> Project Manage </h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">Growth For Your Startup</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-business-analytics.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-red me-3">
-                                                                <em class="icon ni ni-activity-round-fill"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="lead-text fs-14 text-capitalize m-0"> Business Analytics </h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">One Stop Solution</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-codebase.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-green-500 me-3">
-                                                                <em class="icon ni ni-file-code-fill"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="lead-text fs-14 text-capitalize m-0"> Codebase IDE </h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">Integrate Your Relighble Codebase</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-help-desk.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-blue me-3">
-                                                                <em class="icon ni ni-support-fill"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="d-flex align-items-center gap-1 lead-text fs-14 text-capitalize m-0"> Help Desk <span class="badge rounded-pill text-bg-primary text-uppercase fs-8 ms-1">NEW</span>
-                                                                    </h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">Tech Support Made Simple</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-business-consulting.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-purple-800 me-3">
-                                                                <em class="icon ni ni-cards-fill"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="d-flex align-items-center gap-1 lead-text fs-14 text-capitalize m-0"> Business Consulting <span class="badge rounded-pill text-bg-primary text-uppercase fs-8 ms-1">NEW</span>
-                                                                    </h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">Business growth consulting expertise.</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-fintech.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-purple-800 me-3">
-                                                                <em class="icon ni ni-opt-alt-fill"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="d-flex align-items-center gap-1 lead-text fs-14 text-capitalize m-0"> Fintech <span class="badge rounded-pill text-bg-primary text-uppercase fs-8 ms-1">NEW</span>
-                                                                    </h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">Business growth consulting expertise.</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-green-tech.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-green me-3">
-                                                                <em class="icon ni ni-apple-store-ios"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="d-flex align-items-center gap-1 lead-text fs-14 text-capitalize m-0"> Green Tech <span class="badge rounded-pill text-bg-primary text-uppercase fs-8 ms-1">NEW</span>
-                                                                    </h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">Sustainable green tech solutions.</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="col-lg-6 col-xl-4 p-0">
-                                                    <a href="index-podcast-app.html" class="nk-nav-link">
-                                                        <div class="media-group">
-                                                            <div class="text-blue-1000 me-3">
-                                                                <em class="icon ni ni-headphone-fill"></em>
-                                                            </div>
-                                                            <div class="media-text d-flex align-items-center sm">
-                                                                <div>
-                                                                    <h2 class="d-flex align-items-center gap-1 lead-text fs-14 text-capitalize m-0"> Podcast App <span class="badge rounded-pill text-bg-primary text-uppercase fs-8 ms-1">NEW</span>
-                                                                    </h2>
-                                                                    <span class="sub-text text-nowrap text-capitalize m-0">Podcast streaming made easy.</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nk-nav-item">
-                                    <a href="about.html" class="nk-nav-link">
-                                        <span class="nk-nav-text">About</span>
-                                    </a>
-                                </li>
-                                <li class="nk-nav-item has-sub">
-                                    <a href="#" class="nk-nav-link nk-nav-toggle">
-                                        <span class="nk-nav-text">Pages</span>
-                                    </a>
-                                    <ul class="nk-nav-sub nk-nav-mega row nk-nav-mega-lg">
-                                        <li class="nk-nav-item col-lg-8">
-                                            <ul class="row px-3 px-lg-0 mx-auto">
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="about.html" class="nk-nav-link"> About </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="about-business-solution.html" class="nk-nav-link"> About - v2 </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="page-404.html" class="nk-nav-link"> 404 Error </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="features.html" class="nk-nav-link"> Features </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="features-business-solution.html" class="nk-nav-link"> Features -v2 </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="customer-testimonials.html" class="nk-nav-link"> Testimonials </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="contact-us.html" class="nk-nav-link"> Contact Us </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="contact-us-business-solution.html" class="nk-nav-link"> Contact Us -v2 </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="login.html" class="nk-nav-link"> Login </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="pricing.html" class="nk-nav-link"> Pricing </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="pricing-business-solution.html" class="nk-nav-link"> Pricing -v2 </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="signup.html" class="nk-nav-link"> Sign Up </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="blogs.html" class="nk-nav-link"> Blogs </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="blog-single.html" class="nk-nav-link"> Blog Single </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="reset-password.html" class="nk-nav-link"> Reset Password </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="help-center.html" class="nk-nav-link"> Help Center </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="help-center-single.html" class="nk-nav-link"> Help Center Single </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="forgot-password.html" class="nk-nav-link"> Forgot Password </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="terms-and-conditions.html" class="nk-nav-link"> Terms &amp; Conditions </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="careers.html" class="nk-nav-link"> Careers </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="career-details.html" class="nk-nav-link"> Career Details </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="careers-project-manage.html" class="nk-nav-link"> Careers-v2 </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="career-details-project-manage.html" class="nk-nav-link d-flex align-items-center text-nowrap"> Careers Details-v2 </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="shop.html" class="nk-nav-link"> Shop </a>
-                                                </li>
-                                                <li class="col-lg-4 p-0">
-                                                    <a href="product-details.html" class="nk-nav-link"> Product Details </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nk-nav-item col-lg-4 nk-nav-media d-none d-lg-block">
-                                            <a href="https://1.envato.market/NioLand" target="_blank">
-                                                <img src="assets/images/promo-banner/promo-1.png" alt="promo-banner" class="rounded-3">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nk-nav-item">
-                                    <a href="blogs.html" class="nk-nav-link">
-                                        <span class="nk-nav-text">Blogs</span>
-                                    </a>
-                                </li>
-                                <li class="nk-nav-item">
-                                    <a href="contact-us.html" class="nk-nav-link">
-                                        <span class="nk-nav-text">Contact</span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="nk-navbar-btn d-lg-none">
-                                <ul class="nk-btn-group sm justify-content-center">
-                                    <li class="w-100">
-                                        <a href="https://1.envato.market/NioLand" target="_blank" class="btn btn-primary w-100">
-                                            <em class="icon ni ni-bag-fill"></em>
-                                            <span>Purchase Now</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
-                    <div class="nk-header-action">
-                        <ul class="nk-btn-group gap-2 sm justify-content-center">
-                            <li class="d-none d-md-block">
-                                <a href="https://1.envato.market/NioLand" class="btn btn-dark text-white text-nowrap text-nowrap">
-                                    <em class="icon ni ni-bag-fill"></em>
-                                    <span>Purchase Now</span>
-                                </a>
-                            </li>
-                            <li class="nk-navbar-toggle">
-                                <button class="btn btn-outline-primary navbar-toggle rounded-2 p-2 h-100">
-                                    <e class="icon ni ni-menu"></e>
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    </header>
+    @include('layouts.navbar')
     <main class="nk-pages">
         <!-- Banner Section Start  -->
         <section class="nk-banner nk-banner-codebase">
@@ -538,15 +10,14 @@
                     <div class="row justify-content-center align-items-center">
                         <div class="col-lg-8">
                             <div class="text-center pb-5 pb-lg-7">
-                                <span class="nk-section-subtitle" data-aos="fade-up">code anywhere</span>
-                                <h1 class="text-capitalize display-6 mb-2" data-aos="fade-up" data-aos-delay="200"> Write better code, collaboratively </h1>
-                                <p class="m-0" data-aos="fade-up" data-aos-delay="300"> Collaborate and write better code with ease using our powerful coding platform. Enhance productivity, share ideas, and build exceptional software together. </p>
+                                <h1 class="text-capitalize display-6 mb-2 " data-aos="fade-up" data-aos-delay="200"> Location Intelligence tool for accelerating your business growthy </h1>
+                                <p class="m-0" data-aos="fade-up" data-aos-delay="300">Analyzing data spatially is considered very complicated in general use, so most prefer not to rely on spatial data analysis techniques.  </p>
                                 <ul class="nk-btn-group gap-1 gap-sm-2 justify-content-center pt-5" data-aos="fade-up" data-aos-delay="400">
                                     <li>
-                                        <a href="#" class="btn btn-dark align-items-center"> Get started for free </a>
+                                        <a href="#" class="btn btn-dark align-items-center"> Get started </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="btn btn-outline-dark border-0"> Book A Demo <em class="icon ni ni-arrow-right-circle ms-2"></em>
+                                        <a href="#" class="btn btn-outline-dark border-0"> Request Demo <em class="icon ni ni-arrow-right-circle ms-2"></em>
                                         </a>
                                     </li>
                                 </ul>
@@ -556,7 +27,7 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-10">
                             <div class="nk-frame" data-aos="fade-up" data-aos-delay="500">
-                                <img src="assets/images/codebase/banner-cover-1.png" alt="banner-cover">
+                                <img src="assets/images/map/map7.png" alt="banner-cover rounded">
                                 <div class="nk-frame-children nk-frame-children-one">
                                     <img src="assets/images/codebase/banner-cover-1-a.png" alt="banner-cover-a" class="animate animate-shakeY animate-duration-12">
                                 </div>
@@ -571,11 +42,10 @@
         </section>
         <!-- Banner Section End  -->
         <!-- Features Section Start -->
-        <section class="nk-section nk-section-features">
+        <section class="nk-section bg-gray nk-section-features mt-5 py-lg-0">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-10 col-xxl-8">
-                        <h5 class="text-gray-800 text-center fw-normal mb-5">over <span class="text-dark">32K+ software</span> business growing with NioLand</h5>
                         <div class="row gy-2 gap-sm-2 justify-content-center text-center align-items-center">
                             <div class="col-4 col-sm-3 col-lg-2">
                                 <div class="nk-brand" data-aos="fade-up" data-aos-delay="50">
@@ -607,55 +77,95 @@
                 </div>
             </div>
         </section>
-        <!-- Features Section End  -->
-        <!-- Works Section Start -->
-        <section class="nk-section nk-section-works bg-gray">
+        <!-- Features Section End  -->       
+         <!-- fitur Section start  -->
+        <section class="nk-section pb-7 pb-lg-120">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="nk-section-head text-center pb-5 pb-md-7 ">
-                            <span class="nk-section-subtitle">how it works?</span>
-                            <h2 class="nk-section-title">Works perfectly with your language</h2>
-                            <p> Our platform seamlessly integrates with your preferred programming language, enabling you to write code effortlessly and efficiently. </p>
+                <div class="row justify-content-center justify-content-xxl-start">
+                    <div class="col-lg-8 col-xxl-4">
+                        <div class="nk-section-head text-center text-xxl-start pb-5 pb-md-7 pb-xxl-0">
+                            <span class="nk-section-subtitle">powerful features</span>
+                            <h2 class="nk-section-title">Discover Powerful Features</h2>
+                            <p class="nk-section-text"> Harness the Power of Our Feature-rich Platform to Drive Growth and Success. </p>
+                            <div></div>
+                            <ul class="nk-btn-group justify-content-center justify-content-xxl-start pt-5">
+                                <li>
+                                    <a href="signup.html" class="btn btn-dark text-nowrap">Request A Demo</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn-dark-soft text-nowrap">Contact Us</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-                <div class="row flex-row-reverse align-items-center justify-content-between">
-                    <div class="col-lg-6">
-                        <div class="nk-frame nk-frame-15 overflow-hidden text-end mb-5 mb-md-7 mb-xl-0">
-                            <img src="assets/images/codebase/section-cover-1.png" alt="section-cover">
-                            <div class="nk-frame-children nk-frame-children-one">
-                                <img src="assets/images/codebase/section-cover-1-a.png" alt="section-cover" data-aos="fade-left" data-aos-delay="100">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="d-flex flex-column gap-3">
-                            <div class="d-flex flex-column flex-sm-row gap-3 gap-sm-5 bg-white rounded-4 p-5">
-                                <div class="media media-lg media-middle media-circle text-bg-orange">
-                                    <img src="assets/images/icon/html-sm.png" alt="html" class="rounded-0">
-                                </div>
-                                <div>
-                                    <h4>HTML/CSS/JS</h4>
-                                    <p class="fs-16 text-gray-800"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae at urna eu egestas diam, dolor iaculis adipiscing. </p>
+                    <div class="col-xxl-8">
+                        <div class="row  gy-5 gy-xl-7">
+                            <div class="col-sm-6 col-lg-4 col-xxl-6">
+                                <div class="card bg-transparent border-0" data-aos="fade-up" data-aos-delay="0">
+                                    <div class="card-body p-0">
+                                        <div class="media media-lg media-middle media-circle text-bg-primary-soft mb-4">
+                                            <em class="icon ni ni-trend-up"></em>
+                                        </div>
+                                        <div class="mb-5">
+                                            <h5 class="line-clamp-1">Custom analytics</h5>
+                                            <p class="fs-16 text-gray-1200 line-clamp-2">Get a complete sales dashboard in the cloud. See activity, revenue and social metrics all in one.</p>
+                                        </div>
+                                        <a href="#" class="btn-link">
+                                            <span>Learn More</span>
+                                            <em class="icon ni ni-arrow-right"></em>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="d-flex flex-column flex-sm-row gap-3 gap-sm-5 bg-white rounded-4 p-5">
-                                <div class="media media-lg media-middle media-circle text-bg-primary-soft">
-                                    <img src="assets/images/icon/phython.png" alt="phython" class="rounded-0">
-                                </div>
-                                <div>
-                                    <h4>Python & Django</h4>
-                                    <p class="fs-16 text-gray-800"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae at urna eu egestas diam, dolor iaculis adipiscing. </p>
+                            <div class="col-sm-6 col-lg-4 col-xxl-6">
+                                <div class="card bg-transparent border-0" data-aos="fade-up" data-aos-delay="50">
+                                    <div class="card-body p-0">
+                                        <div class="media media-lg media-middle media-circle text-bg-warning-soft mb-4">
+                                            <em class="icon ni ni-users"></em>
+                                        </div>
+                                        <div class="mb-5">
+                                            <h5 class="line-clamp-1">Team Management</h5>
+                                            <p class="fs-16 text-gray-1200 line-clamp-2"> Our calendar lets you know what is happening with customer and projects so you </p>
+                                        </div>
+                                        <a href="#" class="btn-link">
+                                            <span>Learn More</span>
+                                            <em class="icon ni ni-arrow-right"></em>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="d-flex flex-column flex-sm-row gap-3 gap-sm-5 bg-white rounded-4 p-5">
-                                <div class="media media-lg media-middle media-circle text-bg-danger-soft">
-                                    <img src="assets/images/icon/ruby.png" alt="ruby" class="rounded-0">
+                            <div class="col-sm-6 col-lg-4 col-xxl-6">
+                                <div class="card bg-transparent border-0" data-aos="fade-up" data-aos-delay="0">
+                                    <div class="card-body p-0">
+                                        <div class="media media-lg media-middle media-circle text-bg-danger-soft mb-4">
+                                            <em class="icon ni ni-edit-alt"></em>
+                                        </div>
+                                        <div class="mb-5">
+                                            <h5 class="line-clamp-1">Build Your Website</h5>
+                                            <p class="fs-16 text-gray-1200 line-clamp-2">A tool that lets you build a dream website even if you know nothing about web design.</p>
+                                        </div>
+                                        <a href="#" class="btn-link">
+                                            <span>Learn More</span>
+                                            <em class="icon ni ni-arrow-right"></em>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h4>Ruby on Rails</h4>
-                                    <p class="fs-16 text-gray-800"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae at urna eu egestas diam, dolor iaculis adipiscing. </p>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 col-xxl-6">
+                                <div class="card bg-transparent border-0" data-aos="fade-up" data-aos-delay="50">
+                                    <div class="card-body p-0">
+                                        <div class="media media-lg media-middle media-circle text-bg-success-soft mb-4">
+                                            <em class="icon ni ni-emails"></em>
+                                        </div>
+                                        <div class="mb-5">
+                                            <h5 class="line-clamp-1">Measure Your Performance</h5>
+                                            <p class="fs-16 text-gray-1200 line-clamp-2"> Stay connected with your team and make quick decisions wherever you are. </p>
+                                        </div>
+                                        <a href="#" class="btn-link">
+                                            <span>Learn More</span>
+                                            <em class="icon ni ni-arrow-right"></em>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -663,7 +173,7 @@
                 </div>
             </div>
         </section>
-        <!-- Works Section End -->
+        <!-- fitur Section end  -->
         <!-- Works Section Start -->
         <section class="nk-section py-7 py-lg-120">
             <div class="container">
@@ -701,7 +211,7 @@
                             </ul>
                             <ul class="nk-btn-group gap-0 gap-sm-2 pt-5 pt-lg-7">
                                 <li>
-                                    <a href="#" class="btn btn-primary align-items-center"> Get started for free </a>
+                                    <a href="#" class="btn btn-dark align-items-center"> Get started for free </a>
                                 </li>
                                 <li>
                                     <a href="#" class="btn btn-outline-dark border-0">Book A Demo<span class="lh-1 ms-1">
@@ -716,409 +226,200 @@
             </div>
         </section>
         <!-- Works Section End -->
-        <!-- Integrations Section Start -->
-        <section class="nk-section nk-section-integrations pt-lg-0 pb-lg-4">
-            <div class="nk-frame position-static nk-frame-18">
-                <div class="nk-frame-children nk-frame-children-right nk-frame-children-right-top">
-                    <img src="assets/images/codebase/codebase-blur-2-right.png" alt="blur">
-                </div>
-            </div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="nk-section-head text-center">
-                            <span class="nk-section-subtitle">integrations</span>
-                            <h2 class="nk-section-title"> Integrated with the most popular programming languages </h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit mauris vulputate dui vitae commodo magna vitae nunc diam urna quis Turpis non nulla pulvinar arcu elementum pretium viverra.</p>
-                            <ul class="nk-btn-group gap-0 gap-sm-2 justify-content-center pt-5 pt-lg-7">
-                                <li>
-                                    <a href="#" class="btn btn-dark  align-items-center"> Get started for free </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn btn-outline-dark border-0"> Browse Integrations <span class="lh-1 ms-1">
-                                                <em class="icon ni ni-arrow-right-circle"></em>
-                                            </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="nk-frame text-center" data-aos="fade-in" data-aos-delay="100">
-                            <img src="assets/images/codebase/section-cover-3.png" alt="integrations-tools">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Integrations Section End -->
-        <!-- Features Section Start -->
-        <section class="nk-section nk-section-features  is-theme">
-            <div class="container">
-                <div class="nk-content-wrap p-5 p-md-7 p-lg-120 bg-dark rounded-4 overflow-hidden ">
-                    <div class="nk-mask blur-11"></div>
-                    <div class="row justify-content-center">
-                        <div class="col-xl-7">
-                            <div class="nk-section-head text-center pb-7">
-                                <h2 class="nk-section-title text-primary mb-5"> Amazing features for to make your development easier </h2>
-                                <ul class="nk-btn-group gap-2 justify-content-center">
-                                    <li>
-                                        <a href="#" class="btn text-nowrap btn-white align-items-center"> Get started for free </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="btn text-nowrap btn-outline-white border-0"> Book A Demo <span class="lh-1 ms-1">
-                                                    <em class="icon ni ni-arrow-right-circle"></em>
-                                                </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row gy-5 gy-lg-7">
-                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
-                            <div class="d-flex flex-column gap-3 text-center">
-                                <div class="mb-2">
-                                    <img src="assets/images/icon/processor.svg" alt="icon">
-                                </div>
-                                <h5 class="m-0">Code Pilot</h5>
-                                <p class="fs-16 opacity-75"> Lacus sed turpis tincidunt id tincidunt praesent semper feugiat nibh. </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
-                            <div class="d-flex flex-column gap-3 text-center">
-                                <div class="mb-2">
-                                    <img src="assets/images/icon/code-2.svg" alt="icon">
-                                </div>
-                                <h5 class="m-0">Over 50+ Languages</h5>
-                                <p class="fs-16 opacity-75"> Lacus sed turpis tincidunt id tincidunt praesent semper feugiat nibh. </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                            <div class="d-flex flex-column gap-3 text-center">
-                                <div class="mb-2">
-                                    <img src="assets/images/icon/code.svg" alt="icon">
-                                </div>
-                                <h5 class="m-0">Available on all platforms</h5>
-                                <p class="fs-16 opacity-75"> Lacus sed turpis tincidunt id tincidunt praesent semper feugiat nibh. </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
-                            <div class="d-flex flex-column gap-3 text-center">
-                                <div class="mb-2">
-                                    <img src="assets/images/icon/watch.svg" alt="icon">
-                                </div>
-                                <h5 class="m-0">Real-time code save</h5>
-                                <p class="fs-16 opacity-75"> Lacus sed turpis tincidunt id tincidunt praesent semper feugiat nibh. </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
-                            <div class="d-flex flex-column gap-3 text-center">
-                                <div class="mb-2">
-                                    <img src="assets/images/icon/bug.svg" alt="icon">
-                                </div>
-                                <h5 class="m-0">Built-in code debugger</h5>
-                                <p class="fs-16 opacity-75"> Lacus sed turpis tincidunt id tincidunt praesent semper feugiat nibh. </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                            <div class="d-flex flex-column gap-3 text-center">
-                                <div class="mb-2">
-                                    <img src="assets/images/icon/unlock.svg" alt="icon">
-                                </div>
-                                <h5 class="m-0">Granular permissions</h5>
-                                <p class="fs-16 opacity-75"> Lacus sed turpis tincidunt id tincidunt praesent semper feugiat nibh. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Features Section End -->
-        <!-- Testimonials Section Start -->
-        <section class="nk-section nk-section-testimonials  ">
-            <div class="nk-frame position-static nk-frame-18">
-                <div class="nk-frame-children nk-frame-children-left nk-frame-children-left-bottom">
-                    <img src="assets/images/codebase/codebase-blur-2-left.png" alt="blur">
-                </div>
-                <div class="nk-frame-children nk-frame-children-right nk-frame-children-right-top">
-                    <img src="assets/images/codebase/codebase-blur-2-right.png" alt="blur">
-                </div>
-            </div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="nk-section-head text-center">
-                            <span class="nk-section-subtitle">customer reviews</span>
-                            <h2 class="nk-section-title"> What our amazing customers <br class="d-none d-lg-block"> say about Codely </h2>
-                            <p class="nk-section-text">Lorem ipsum dolor sit amet consectetur adipiscing elit mauris vulputate dui vitae commodo magna vitae nunc diam urna quis Turpis non nulla pulvinar arcu elementum pretium viverra.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="swiper swiper-init nk-swiper" data-autoplay="true" data-space-between="24" data-breakpoints='
-           { "0":{"slidesPerView":1,"slidesPerGroup":1 } }
-                 '>
-                            <div class="swiper-wrapper has-pagination">
-                                <div class="swiper-slide px-4">
-                                    <div class="nk-testimonial-card nk-testimonial-card-s5">
-                                        <div class="nk-testimonial-content">
-                                            <div>
-                                                <img src="assets/images/codebase/sitemark.png" alt="logo">
-                                            </div>
-                                            <div class="pt-5">
-                                                <h3>“ The best Codebase IDE app ”</h3>
-                                                <p class="fs-16 text-gray-800 m-0"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide px-4">
-                                    <div class="nk-testimonial-card nk-testimonial-card-s5">
-                                        <div class="nk-testimonial-content">
-                                            <div>
-                                                <img src="assets/images/codebase/luminous.png" alt="logo">
-                                            </div>
-                                            <div class="pt-5">
-                                                <h3>“ The best Codebase IDE app ”</h3>
-                                                <p class="fs-16 text-gray-800 m-0"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide px-4">
-                                    <div class="nk-testimonial-card nk-testimonial-card-s5">
-                                        <div class="nk-testimonial-content">
-                                            <div>
-                                                <img src="assets/images/codebase/cloud.png" alt="logo">
-                                            </div>
-                                            <div class="pt-5">
-                                                <h3>“ The best Codebase IDE app ”</h3>
-                                                <p class="fs-16 text-gray-800 m-0"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Testimonials Section End -->
-        <!-- Blogs Section Start -->
-        <section class="nk-section nk-section-blogs bg-gray-300">
-            <div class="nk-frame position-static nk-frame-18">
-                <div class="nk-frame-children nk-frame-children-right nk-frame-children-right-top">
-                    <img src="assets/images/codebase/codebase-blur-2-right.png" alt="blur">
-                </div>
-            </div>
+        <!-- testimonial Section Start  -->
+        <section class="nk-section overflow-hidden pt-7 pt-lg-120">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-xxl-6">
                         <div class="nk-section-head text-center">
-                            <span class="nk-section-subtitle">Our Blogs</span>
-                            <h2 class="nk-section-title"> Browse our latest news and resources </h2>
-                            <p class="nk-section-text">Lorem ipsum dolor sit amet consectetur adipiscing elit mauris vulputate dui vitae commodo magna vitae nunc diam urna quis.</p>
+                            <span class="nk-section-subtitle">Customer testimonials</span>
+                            <div>
+                                <h2 class="nk-section-title">Stories From Our Customers</h2>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center gy-5 gy-lg-0">
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
-                        <div class="card h-100 bg-white rounded-4">
-                            <div class="card-body">
-                                <div class="mb-5">
-                                    <a href="#">
-                                        <img src="assets/images/codebase/card-cover-1.png" alt="card-cover" class="w-100">
-                                    </a>
+                <div class="swiper swiper-init nk-swiper nk-swiper-s4 pt-5 pt-lg-0" data-autoplay="true" data-space-between="30" data-breakpoints='{
+                "0":{"slidesPerView":1,"slidesPerGroup":1 },
+                "991":{"slidesPerView":2,"slidesPerGroup":1}
+                }'>
+                    <div class="swiper-wrapper has-pagination">
+                        <div class="swiper-slide h-auto">
+                            <div class="nk-testimonial-card nk-testimonial-card-s3 shadow-none">
+                                <div class="nk-testimonial-content">
+                                    <div class="nk-testimonial-icon mb-0">
+                                    </div>
+                                    <p class="lead line-clamp-3"> I have been using this platform for my online store, and it has been a game-changer for me. The ease of managing my inventory, processing orders, and analyzing sales data has allowed me to focus more on growing my business. The platform's intuitive interface and robust features have made my life so much easier. I highly recommend it to any online business owner looking for a comprehensive solution. </p>
+                                    <div class="media-group align-items-center pt-4">
+                                        <div class="media media-circle">
+                                            <img src="assets/images/avatar/a.jpg" alt="avatar">
+                                        </div>
+                                        <div class="media-text">
+                                            <h5 class="mb-n1 text-capitalize">John Carter</h5>
+                                            <span class="fs-14 fw-medium">Financial Analyst</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <a href="#">
-                                        <h4 class="m-0">Code refactoring best practices: how to do it?</h4>
-                                    </a>
-                                    <div class="pt-5">
-                                        <span class="text-uppercase fs-18 text-gray-800">January 19, 2022</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="nk-testimonial-card nk-testimonial-card-s3 shadow-none">
+                                <div class="nk-testimonial-content">
+                                    <div class="nk-testimonial-icon mb-0">
+                                    </div>
+                                    <p class="lead line-clamp-3"> After struggling with manual processes and scattered data, I decided to give this platform a try, and I'm so glad I did. The automation features have saved me so much time and effort. From automated inventory updates to seamless integration with my online marketplace, I now have more control and visibility over my operations. Plus, the detailed analytics have helped me identify trends and optimize my product offerings. It's a must-have tool for any business owner </p>
+                                    <div class="media-group align-items-center pt-4">
+                                        <div class="media media-circle">
+                                            <img src="assets/images/avatar/b.jpg" alt="">
+                                        </div>
+                                        <div class="media-text">
+                                            <h5 class="mb-n1 text-capitalize">Bella Grace</h5>
+                                            <span class="fs-14 fw-medium">Digital Marketing</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="nk-testimonial-card nk-testimonial-card-s3 shadow-none">
+                                <div class="nk-testimonial-content">
+                                    <div class="nk-testimonial-icon mb-0">
+                                    </div>
+                                    <p class="lead line-clamp-3"> Since implementing this platform, my business has experienced remarkable growth. The ability to easily manage orders, track shipments, and monitor customer engagement has been invaluable. I now have a clear picture of my business performance and can make informed decisions to drive further growth. The platform's user-friendly interface and prompt customer support have exceeded my expectations. I couldn't be happier with the results. </p>
+                                    <div class="media-group align-items-center pt-4">
+                                        <div class="media media-circle">
+                                            <img src="assets/images/avatar/a.jpg" alt="avatar">
+                                        </div>
+                                        <div class="media-text">
+                                            <h5 class="mb-n1 text-capitalize">John Carter</h5>
+                                            <span class="fs-14 fw-medium">Financial Analyst</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
-                        <div class="card h-100 bg-white rounded-4">
-                            <div class="card-body">
-                                <div class="mb-5">
-                                    <a href="#">
-                                        <img src="assets/images/codebase/card-cover-2.png" alt="card-cover" class="w-100">
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#">
-                                        <h4 class="m-0">7 programming language you should pay attention in 2022</h4>
-                                    </a>
-                                    <div class="pt-5">
-                                        <span class="text-uppercase fs-18 text-gray-800">April 23, 2022</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- .swiper-wrap -->
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-group d-none d-lg-block">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card h-100 bg-white rounded-4">
-                            <div class="card-body">
-                                <div class="mb-5">
-                                    <a href="#">
-                                        <img src="assets/images/codebase/card-cover-3.png" alt="card-cover" class="w-100">
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#">
-                                        <h4 class="m-0">Discover all the new features available in v2.0</h4>
-                                    </a>
-                                    <div class="pt-5">
-                                        <span class="text-uppercase fs-18 text-gray-800">Feburary 12, 2022</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="text-center pt-lg-7">
-                            <a href="#" class="btn btn-dark">Browse All Articles</a>
-                        </div>
-                    </div>
+                    <!-- swiper-button-group -->
                 </div>
             </div>
         </section>
-        <!-- Blogs Section End -->
-        <!-- CTA Section Start -->
-        <section class="nk-section-blogs overflow-hidden pt-7 pt-lg-120 bg-gradient-27">
+        <!-- testimonial Section End  -->
+        <!-- Faqs Section Start  -->
+        <section class="nk-section nk-section-faq">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-xxl-6">
-                        <div class="nk-section-head text-center">
-                            <span class="nk-section-subtitle">Get started</span>
-                            <h2 class="nk-section-title">Try the code editor of the future, today.</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit mauris vulputate dui vitae commodo magna vitae.</p>
-                            <ul class="nk-btn-group gap-0 gap-sm-2 justify-content-center pt-5">
+                <div class="row justify-content-between">
+                    <div class="col-xl-5 col-xxl-4">
+                        <div class="nk-section-head pb-5 pb-xl-0">
+                            <span class="nk-section-subtitle">FAQS</span>
+                            <h2 class="nk-section-title">Frequently Asked Questions</h2>
+                            <p class="nk-section-text"> Get quick answers to common queries about our service, pricing, security, and account management in our FAQ section. </p>
+                            <ul class="nk-btn-group pt-5">
                                 <li>
-                                    <a href="#" class="btn btn-dark  align-items-center"> Get started for free </a>
+                                    <a href="help-center.html" class="btn btn-dark text-nowrap">Go to support center</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="btn btn-outline-dark border-0"> Book a Demo <span class="lh-1 ms-1">
-                                                <em class="icon ni ni-arrow-right-circle"></em>
-                                            </span>
-                                    </a>
+                                    <a href="contact.html" class="btn btn-dark-soft">Contact Us</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="nk-frame text-center nk-frame-17 mb-n1 mb-xl-n0" data-aos="fade-up" data-aos-offset="" data-aos-delay="0">
-                            <img src="assets/images/codebase/section-cover-4.png" alt="section-cover">
-                            <div class="nk-frame-children nk-frame-children-one animate animate-shakeY animate-duration-12 animate-delay-1 d-none d-xl-block">
-                                <img src="assets/images/codebase/section-cover-4-a.png" alt="cover-frame-children">
-                            </div>
-                            <div class="nk-frame-children nk-frame-children-two animate animate-shakeY animate-duration-12 d-none d-xl-block">
-                                <img src="assets/images/codebase/section-cover-4-b.png" alt="cover-frame-children">
+                    <div class=" col-xl-7 col-xxl-8">
+                        <div class="nk-faq">
+                            <div class="accordion accordion-s3 px-0" id="accordionExample">
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <h6>
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+                                                <span class="text-capitalize">How long does it take to ship my order?</span>
+                                                <em class="inline-block bg-gray-50 p-3 rounded-1 icon ni ni-downward-ios on"></em>
+                                                <em class="inline-block bg-gray-50 p-3 rounded-1 icon ni ni-upword-ios off"></em>
+                                            </button>
+                                        </h6>
+                                    </div>
+                                    <div id="faqCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p class="fs-16"> The shipping time for your order may vary depending on your location and the shipping method chosen. Please refer to our shipping policy for more information or contact our customer support for specific details regarding your order. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <h6>
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
+                                                <span class="text-capitalize">What payment methods do you accept?</span>
+                                                <em class="inline-block bg-gray-50 p-3 rounded-1 icon ni ni-downward-ios on"></em>
+                                                <em class="inline-block bg-gray-50 p-3 rounded-1 icon ni ni-upword-ios off"></em>
+                                            </button>
+                                        </h6>
+                                    </div>
+                                    <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p class="fs-16"> We accept various payment methods, including credit cards, debit cards, PayPal, and bank transfers. You can choose the most convenient option during the checkout process. For more information or assistance with payment methods, please reach out to our customer support team. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <h6>
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
+                                                <span class="text-capitalize">What shipping options do you have?</span>
+                                                <em class="inline-block bg-gray-50 p-3 rounded-1 icon ni ni-downward-ios on"></em>
+                                                <em class="inline-block bg-gray-50 p-3 rounded-1 icon ni ni-upword-ios off"></em>
+                                            </button>
+                                        </h6>
+                                    </div>
+                                    <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p class="fs-16"> We offer a range of shipping options to accommodate your needs. These options include standard shipping, express shipping, and international shipping. The availability of specific shipping methods may vary depending on your location and the product you are ordering. During the checkout process, you can select the shipping option that best suits your preferences and requirements. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <h6>
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour">
+                                                <span class="text-capitalize">How do I make changes to an existing order?</span>
+                                                <em class="inline-block bg-gray-50 p-3 rounded-1 icon ni ni-downward-ios on"></em>
+                                                <em class="inline-block bg-gray-50 p-3 rounded-1 icon ni ni-upword-ios off"></em>
+                                            </button>
+                                        </h6>
+                                    </div>
+                                    <div id="faqCollapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p class="fs-16"> To make changes to an existing order, please contact our customer support team as soon as possible. Provide them with your order details and the specific changes you would like to make. Our team will assist you in updating your order, such as modifying the shipping address, adding or removing items, or adjusting quantities. Please note that order modifications may be subject to certain limitations and availability of the requested changes. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <h6>
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive">
+                                                <span class="text-capitalize">When will my order arrive?</span>
+                                                <em class="inline-block bg-gray-50 p-3 rounded-1 icon ni ni-downward-ios on"></em>
+                                                <em class="inline-block bg-gray-50 p-3 rounded-1 icon ni ni-upword-ios off"></em>
+                                            </button>
+                                        </h6>
+                                    </div>
+                                    <div id="faqCollapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p class="fs-16"> The delivery time of your order depends on various factors such as the shipping method selected, the destination, and any applicable customs procedures. Once your order is processed and shipped, you will receive a confirmation email with tracking information to monitor the progress of your package. For more specific details about the estimated delivery time, please refer to the shipping information provided during the checkout process or contact our customer support team for assistance. </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- CTA Section End -->
+        <!-- Faqs Section End  -->
     </main>
-    <footer class="nk-footer">
-        <div class="nk-footer-top">
-            <div class="container">
-                <div class="nk-footer-content row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="nk-footer-brand  text-center">
-                            <div class="nk-footer-logo mb-4">
-                                <a href="index.html" class="logo-link">
-                                    <div class="logo-wrap">
-                                        <img class="logo-img logo-light" src="assets/images/logo-s1.png" srcset="assets/images/logo-s12x.png 2x" alt="brand-logo">
-                                        <img class="logo-img logo-dark" src="assets/images/logo-s1-dark.png" srcset="assets/images/logo-s1-dark2x.png 2x" alt="brand-logo">
-                                    </div>
-                                </a>
-                            </div>
-                            <p class="nk-footer-text text-gray-800 mb-4"> NioLand is an innovative platform that offers a wide range of services and features to enhance productivity, creativity, and collaboration. </p>
-                            <ul class="nk-footer-social justify-content-center">
-                                <li>
-                                    <a href="#">
-                                        <em class="icon ni ni-facebook-f"></em>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <em class="icon ni ni-twitter"></em>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <em class="icon ni ni-linkedin"></em>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <em class="icon ni ni-telegram"></em>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="nk-footer-bottom">
-            <div class="container">
-                <div class="nk-footer-content row align-items-center justify-content-between">
-                    <div class="col-lg-6 px-lg-0">
-                        <p class="nk-footer-copyright-text text-center text-lg-start">&copy; 2011 - <span id="currentYear"></span>
-                            <a class="fs-16" href="https://softnio.com/" target="_blank"> Softnio</a>. All Rights Reserved.
-                        </p>
-                    </div>
-                    <div class="col-lg-6 px-lg-0">
-                        <ul class="nk-footer-copyright justify-content-center justify-content-lg-end">
-                            <li>
-                                <a class="nk-footer-text" href="#">All Rights</a>
-                            </li>
-                            <li>
-                                <a class="nk-footer-text" href="#">Terms & conditions</a>
-                            </li>
-                            <li>
-                                <a class="nk-footer-text" href="#">Privacy Policy</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <a href="#" class="scroll-top shadow animate animate-infinite animate-pulse animate-duration-2">
-        <em class="icon ni ni-chevrons-up"></em>
-    </a>
-    <div class="nk-sticky-badge">
-        <ul>
-            <li>
-                <a href="index.html" target="_blank" class="nk-sticky-badge-icon nk-sticky-badge-home" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="nk-tooltip" data-bs-title="View Demo">
-                    <em class="icon ni ni-home-fill"></em>
-                </a>
-            </li>
-            <li>
-                <a href="https://1.envato.market/NioLand" target="_blank" class="nk-sticky-badge-icon nk-sticky-badge-purchase" data-bs-toggle="tooltip" data-bs-custom-class="nk-tooltip" data-bs-title="Purchase Now" aria-label="Purchase Now">
-                    <em class="icon ni ni-cart-fill"></em>
-                </a>
-            </li>
-        </ul>
-    </div>
 </div>
-<script src="assets/js/bundle.js?v1.0.0"></script>
-<script src="assets/js/scripts.js?v1.0.0"></script>
-</body>
-
-</html>
+@endsection
